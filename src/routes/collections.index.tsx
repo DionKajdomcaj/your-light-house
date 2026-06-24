@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteShell, PageHeader } from "@/components/site/SiteShell";
 import { collections } from "@/lib/catalog";
 
-export const Route = createFileRoute("/collections")({
+export const Route = createFileRoute("/collections/")({
   head: () => ({
     meta: [
       { title: "Collections — Lighthouse" },
