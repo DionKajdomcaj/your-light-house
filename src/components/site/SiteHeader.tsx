@@ -57,11 +57,10 @@ export function SiteHeader({ overImage = false }: { overImage?: boolean }) {
             <Search className="h-4 w-4" strokeWidth={1.5} />
           </Link>
           <button
-            aria-label="Language"
-            className="hidden h-9 w-9 items-center justify-center transition-opacity hover:opacity-60 lg:inline-flex"
+            aria-label="Menu"
+            onClick={() => setOpen(true)}
+            className="inline-flex h-9 w-9 items-center justify-center transition-opacity hover:opacity-60"
           >
-            <Globe className="h-4 w-4" strokeWidth={1.5} />
-          </button>
           <button
             aria-label="Menu"
             onClick={() => setOpen(true)}
