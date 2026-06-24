@@ -121,25 +121,6 @@ function Home() {
         </div>
       </section>
 
-      {/* COLLECTIONS STRIP */}
-      <section className="bg-[color:var(--surface-soft)] py-24 md:py-32">
-        <div className="container-x">
-          <div className="mb-12 flex items-end justify-between">
-            <h2 className="h-section text-2xl md:text-3xl">Explore our collections</h2>
-          </div>
-          <div className="grid gap-1 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
-            {collections.map((c) => (
-              <Link key={c.slug} to="/collections/$slug" params={{ slug: c.slug }} className="group relative block aspect-[3/4] overflow-hidden">
-                <img src={c.image} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-90" />
-                <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between text-[color:var(--ink)]">
-                  <span className="t-product">{c.name}</span>
-                  <span aria-hidden>→</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ATELIER */}
       <section className="container-x py-24 md:py-32">
