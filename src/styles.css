@@ -5,64 +5,52 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-brass: var(--brass);
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --color-background: var(--surface);
+  --color-foreground: var(--ink);
+  --color-surface: var(--surface);
+  --color-surface-soft: var(--surface-soft);
+  --color-surface-muted: var(--surface-muted);
   --color-ink: var(--ink);
-  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-light: var(--ink-light);
+  --color-on-image: var(--on-image);
+  --color-card: var(--surface);
+  --color-card-foreground: var(--ink);
+  --color-popover: var(--surface);
+  --color-popover-foreground: var(--ink);
+  --color-primary: var(--ink);
+  --color-primary-foreground: var(--surface);
+  --color-secondary: var(--surface-soft);
+  --color-secondary-foreground: var(--ink);
+  --color-muted: var(--surface-soft);
+  --color-muted-foreground: var(--ink-muted);
+  --color-accent: var(--surface-soft);
+  --color-accent-foreground: var(--ink);
+  --color-destructive: oklch(0.55 0.22 27);
+  --color-destructive-foreground: #ffffff;
+  --color-border: var(--ink-light);
+  --color-input: var(--ink-light);
+  --color-ring: var(--ink);
+  --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 :root {
-  --radius: 0.25rem;
-  /* Warm editorial off-white */
-  --background: oklch(0.975 0.012 85);
-  --foreground: oklch(0.18 0.012 60);
-  --ink: oklch(0.18 0.012 60);
-  --card: oklch(0.99 0.006 85);
-  --card-foreground: oklch(0.18 0.012 60);
-  --popover: oklch(0.99 0.006 85);
-  --popover-foreground: oklch(0.18 0.012 60);
-  --primary: oklch(0.22 0.015 60);
-  --primary-foreground: oklch(0.975 0.012 85);
-  --secondary: oklch(0.93 0.018 80);
-  --secondary-foreground: oklch(0.22 0.015 60);
-  --muted: oklch(0.93 0.018 80);
-  --muted-foreground: oklch(0.46 0.015 65);
-  --accent: oklch(0.7 0.13 70);
-  --accent-foreground: oklch(0.18 0.012 60);
-  --brass: oklch(0.68 0.12 75);
-  --destructive: oklch(0.55 0.22 27);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.88 0.018 80);
-  --input: oklch(0.88 0.018 80);
-  --ring: oklch(0.68 0.12 75);
-}
-
-.dark {
-  --background: oklch(0.16 0.01 60);
-  --foreground: oklch(0.96 0.012 85);
+  --radius: 0;
+  --surface: #ffffff;
+  --surface-soft: #f4f4f4;
+  --surface-muted: #dadada;
+  --ink: #000000;
+  --ink-muted: #6b6b6b;
+  --ink-light: #b5b5b5;
+  --on-image: #ffffff;
+  --background: #ffffff;
+  --foreground: #000000;
+  --border: #b5b5b5;
 }
 
 @layer base {
@@ -70,29 +58,89 @@
     border-color: var(--color-border);
   }
   html, body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    background-color: var(--surface);
+    color: var(--ink);
     font-family: var(--font-sans);
-    -webkit-font-smoothing: antialiased;
-  }
-  h1, h2, h3, h4, .font-display {
-    font-family: var(--font-display);
     font-weight: 400;
-    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+  }
+  ::selection { background: #000; color: #fff; }
 }
 
 @utility container-x {
   width: 100%;
   margin-inline: auto;
-  padding-inline: 1.25rem;
-  max-width: 80rem;
+  padding-inline: 1rem;
+  max-width: 90rem;
   @media (min-width: 1024px) { padding-inline: 2.5rem; }
 }
 
+/* ALL CAPS display headline */
+@utility h-display {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  line-height: 1.05;
+}
+
+/* ALL CAPS section title */
+@utility h-section {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+}
+
+/* Sentence-case sub-section */
+@utility h-sub {
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+/* Product name — ALL CAPS small */
+@utility t-product {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+}
+
+/* Product code — muted lowercase */
+@utility t-code {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--ink-muted);
+  letter-spacing: 0.02em;
+}
+
+/* Eyebrow / small caps label */
 @utility eyebrow {
   font-size: 0.7rem;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 400;
+  color: var(--ink-muted);
+}
+
+/* Inline CTA with arrow */
+@utility cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: var(--ink);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: border-color 150ms ease, opacity 150ms ease;
+}
+@utility cta-link-on-image {
+  color: var(--on-image);
 }

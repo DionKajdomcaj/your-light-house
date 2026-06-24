@@ -77,9 +77,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "LightHouse — Maison de lumière" },
-      { name: "description", content: "LightHouse designs decorative and architectural lighting from a workshop in Brescia. Pendants, chandeliers, sconces and outdoor fixtures." },
-      { property: "og:site_name", content: "LightHouse" },
+      { title: "Lighthouse — Light up your ideal" },
+      { name: "description", content: "Lighthouse — decorative and technical lighting. Indoor, outdoor, recessed and systems. Family-run, Italian-made." },
+      { property: "og:site_name", content: "Lighthouse" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -89,7 +89,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap",
       },
     ],
   }),
