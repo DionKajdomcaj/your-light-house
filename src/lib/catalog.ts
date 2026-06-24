@@ -1,179 +1,165 @@
-import product1 from "@/assets/product-1.jpg";
-import product2 from "@/assets/product-2.jpg";
-import product3 from "@/assets/product-3.jpg";
-import product4 from "@/assets/product-4.jpg";
-import product5 from "@/assets/product-5.jpg";
-import product6 from "@/assets/product-6.jpg";
-import colModern from "@/assets/collection-modern.jpg";
-import colClassic from "@/assets/collection-classic.jpg";
-import colOutdoor from "@/assets/collection-outdoor.jpg";
-import colKids from "@/assets/collection-kids.jpg";
-
-export type Collection = {
-  slug: string;
-  name: string;
-  tagline: string;
-  description: string;
-  image: string;
-};
-
+// Auto-generated catalog
 export type Product = {
-  slug: string;
-  name: string;
-  collection: string;
-  type: string;
-  price: number;
-  finishes: string[];
-  image: string;
-  description: string;
-  specs: { label: string; value: string }[];
+  id: string; slug: string; name: string; family: string; collection: string;
+  price: number; image: string; finish: string; material: string; size: string; watts: string; lights: number;
 };
+export type Collection = { slug: string; name: string; description: string; cover: string; products: Product[] };
 
 export const collections: Collection[] = [
-  {
-    slug: "modern",
-    name: "Modern",
-    tagline: "Architectural restraint",
-    description:
-      "Pared-back silhouettes in brass, blackened steel and opal glass — built for rooms where the light is the gesture.",
-    image: colModern,
-  },
-  {
-    slug: "classic",
-    name: "Classic",
-    tagline: "Crystal and candlelight",
-    description:
-      "Hand-finished chandeliers and sconces drawing from European decorative traditions, reissued for contemporary homes.",
-    image: colClassic,
-  },
-  {
-    slug: "outdoor",
-    name: "Outdoor",
-    tagline: "Weather, warmly answered",
-    description:
-      "IP-rated wall lanterns, bollards and ceiling fixtures engineered for terraces, gardens and façades.",
-    image: colOutdoor,
-  },
-  {
-    slug: "kids",
-    name: "Kids",
-    tagline: "Soft worlds, soft light",
-    description:
-      "Sculptural ceiling and wall pieces designed for bedrooms — playful forms, warm temperatures, gentle dimming.",
-    image: colKids,
-  },
+  { slug: "pendant", name: "Pendant Lights", description: "Sculptural pieces that anchor a room from above.", cover: "https://www.ideal-lux.com/assets/products/web/310800_WEB001_Z_-_MAPA_BIANCO_SP1_D10.png", products: [
+    { id: "8021696310800", slug: "mapa-bianco-sp1-d10-0800", name: "Mapa Bianco Sp1 D10", family: "MAPA", collection: "pendant", price: 67.1, image: "https://www.ideal-lux.com/assets/products/web/310800_WEB001_Z_-_MAPA_BIANCO_SP1_D10.png", finish: "BIANCO", material: "ME,VE", size: "D 100 x H min 350 / max 2100 mm", watts: "G9 max1 x 4W", lights: 1 },
+    { id: "8021696135991", slug: "sole-sp1-d30-5991", name: "Sole Sp1 D30", family: "SOLE", collection: "pendant", price: 115.9, image: "https://www.ideal-lux.com/assets/products/web/135991_WEB001_SOLE_SP1_D30.png", finish: "BIANCO", material: "PS", size: "D 300 x H min 530 / max 1210 mm", watts: "E27 max 1 x 42W", lights: 1 },
+    { id: "8021696093659", slug: "moby-sp1-nero-3659", name: "Moby Sp1 Nero", family: "MOBY", collection: "pendant", price: 154.94, image: "https://www.ideal-lux.com/assets/products/web/093659_WEB001_MOBY_SP1_NERO.png", finish: "NERO", material: "ME", size: "D 350 x H min 475 / max 2225 mm", watts: "E27 max 1 x 42W", lights: 1 },
+    { id: "8021696122083", slug: "frida-sp1-brunito-2083", name: "Frida Sp1 Brunito", family: "FRIDA", collection: "pendant", price: 48.8, image: "https://www.ideal-lux.com/assets/products/web/122083_WEB001_FRIDA_SP1_BRUNITO.png", finish: "BRUNITO", material: "ME", size: "D 90 x H min 320 / max 2070 mm", watts: "E27 max 1 x 60W", lights: 1 },
+    { id: "8021696232744", slug: "a-line-sp1-d30-nero-2744", name: "A-line Sp1 D30 Nero", family: "A-LINE", collection: "pendant", price: 103.7, image: "https://www.ideal-lux.com/assets/products/web/232744_WEB001_ALINE_SP1_D30_NERO.png", finish: "NERO", material: "ME", size: "D 300 x H min 520 / max 2270 mm", watts: "E27 max 1 x 60W", lights: 1 },
+    { id: "8021696343310", slug: "look-sp1-round-d40-h400-nero-3310", name: "Look Sp1 Round D40 H400 Nero", family: "LOOK", collection: "pendant", price: 80.52, image: "https://www.ideal-lux.com/assets/products/web/343310_WEB001_LOOK_SP1_D04_NERO.png", finish: "NERO", material: "AL, ME ", size: "D 40 x H min 660 / max 2600 mm", watts: "GU10 max1 x 28W", lights: 1 },
+    { id: "8021696279770", slug: "diesis-sp-nero-9770", name: "Diesis Sp Nero", family: "DIESIS", collection: "pendant", price: 134.2, image: "https://www.ideal-lux.com/assets/products/web/279770_WEB001_DIESIS_SP_NERO.png", finish: "NERO", material: "ME", size: "D 60 x H min 505 / max 2430 mm", watts: "LED 7W", lights: 1 },
+    { id: "8021696297767", slug: "cotton-sp1-d30-7767", name: "Cotton Sp1 D30", family: "COTTON", collection: "pendant", price: 164.7, image: "https://www.ideal-lux.com/assets/products/web/297767_WEB001_COTTON_SP1_D30.png", finish: "BIANCO", material: "AL,VE,ME", size: "D 300 x H min 455 / max 2230 mm", watts: "E27 max 1 x 42W", lights: 1 },
+    { id: "8021696285061", slug: "oracle-slim-sp-d150-round-3000k-on-off-ne-5061", name: "Oracle Slim Sp D150 Round 3000k On-off Ne", family: "ORACLE SLIM", collection: "pendant", price: 597.8, image: "https://www.ideal-lux.com/assets/products/web/285061_WEB001_ORACLE_SLIM_SP_D150_ROUND_3000K_ONOFF_BK.png", finish: "NERO", material: "AL,ME,PS", size: "D 1500 x H min 275 / max 2025 mm", watts: "81W", lights: 1 },
+    { id: "8021696309811", slug: "empire-sp1-sfera-9811", name: "Empire Sp1 Sfera", family: "EMPIRE", collection: "pendant", price: 122.0, image: "https://www.ideal-lux.com/assets/products/web/309811_WEB001_EMPIRE_SP1_SFERA.png", finish: "CROMO SFUM", material: "VE,ME", size: "D 180 x H min 515 / max 2315 mm", watts: "G9 max 1 x 28W", lights: 1 },
+    { id: "8021696035680", slug: "flut-sp1-big-nero-5680", name: "Flut Sp1 Big Nero", family: "FLUT", collection: "pendant", price: 170.8, image: "https://www.ideal-lux.com/assets/products/web/035680_WEB001_FLUT_SP1_BIG_NERO.png", finish: "NERO", material: "VE", size: "D 145 x H min 890 / max 2640 mm", watts: "E27 max 1 x 60W", lights: 1 },
+    { id: "8021696139425", slug: "frida-sp1-nero-9425", name: "Frida Sp1 Nero", family: "FRIDA", collection: "pendant", price: 48.8, image: "https://www.ideal-lux.com/assets/products/web/139425_WEB001_FRIDA_SP1_NERO.png", finish: "NERO", material: "ME", size: "D 90 x H min 320 / max 2070 mm", watts: "E27 max 1 x 60W", lights: 1 },
+    { id: "8021696281582", slug: "yurta-sp1-d50-nero-1582", name: "Yurta Sp1 D50 Nero", family: "YURTA", collection: "pendant", price: 134.2, image: "https://www.ideal-lux.com/assets/products/web/281582_WEB001_YURTA_SP1_D50_NERO.png", finish: "NERO", material: "ME", size: "D 500 x H min 420 / max 2170 mm", watts: "E27 max 1 x 60W", lights: 1 },
+    { id: "8021696248554", slug: "mint-1-sp1-verde-8554", name: "Mint-1 Sp1 Verde", family: "MINT", collection: "pendant", price: 128.1, image: "https://www.ideal-lux.com/assets/products/web/248554_WEB001_MINT1_SP1_VERDE.png", finish: "VERDE", material: "VE,ME", size: "D 140 x H min 485 / max 2235 mm", watts: "E27 max 1 x 60W", lights: 1 },
+    { id: "8021696285092", slug: "essence-sp-round-nero-3000k-5092", name: "Essence Sp Round Nero 3000k", family: "ESSENCE", collection: "pendant", price: 268.4, image: "https://www.ideal-lux.com/assets/products/web/285092_WEB001_ESSENCE_SP_D126_NERO.png", finish: "NERO", material: "ME,AL", size: "L 1150 x H min 335 / max 2135 x P 60 mm", watts: "LED 19W", lights: 1 },
+    { id: "8021696288390", slug: "mix-up-msp1-nero-8390", name: "Mix Up Msp1 Nero", family: "MIX-UP", collection: "pendant", price: 67.1, image: "https://www.ideal-lux.com/assets/products/web/288390_WEB001_MIX_UP_MSP1_NERO.png", finish: "NERO", material: "ME,PVC", size: "D 45 x H min 368 / max 2300 mm", watts: "E27 max1 x 60W", lights: 1 },
+    { id: "8021696141794", slug: "look-sp1-round-d60-h400-brunito-1794", name: "Look Sp1 Round D60 H400 Brunito", family: "LOOK", collection: "pendant", price: 97.6, image: "https://www.ideal-lux.com/assets/products/web/141794_WEB001_LOOK_SP1_D06_BRUNITO.png", finish: "BRUNITO", material: "ME", size: "D 60 x H min 660 / max 2400 mm", watts: "GU10 max1 x 28W", lights: 1 },
+    { id: "8021696246796", slug: "fiesta-sp10-6796", name: "Fiesta Sp10", family: "FIESTA", collection: "pendant", price: 122.0, image: "https://www.ideal-lux.com/assets/products/web/246796_WEB001_FIESTA_SP10.png", finish: "NERO", material: "PS", size: "L 6050 x H 140 x P 40 mm", watts: "E27 max 10 x 15W", lights: 10 },
+    { id: "8021696237442", slug: "mint-1-sp1-fume-7442", name: "Mint-1 Sp1 Fume'", family: "MINT", collection: "pendant", price: 128.1, image: "https://www.ideal-lux.com/assets/products/web/237442_WEB001_MINT1_SP1_FUME.png", finish: "FUME'", material: "VE,ME", size: "D 140 x H min 485 / max 2235 mm", watts: "E27 max 1 x 60W", lights: 1 },
+    { id: "8021696141855", slug: "look-sp1-round-d60-h400-rame-1855", name: "Look Sp1 Round D60 H400 Rame", family: "LOOK", collection: "pendant", price: 97.6, image: "https://www.ideal-lux.com/assets/products/web/141855_WEB001_LOOK_SP1_D06_RAME.png", finish: "RAME", material: "ME", size: "D 60 x H min 660 / max 2400 mm", watts: "GU10 max1 x 28W", lights: 1 },
+    { id: "8021696277370", slug: "equinoxe-sp1-d15-ottone-7370", name: "Equinoxe Sp1 D15 Ottone", family: "EQUINOXE", collection: "pendant", price: 161.04, image: "https://www.ideal-lux.com/assets/products/web/277370_WEB001_EQUINOXE_SP1_D15_OTTONE.png", finish: "OTTONE", material: "ME,VE", size: "D 150 x H min 530 / max 2280 mm", watts: "G4 max 1 x 2W", lights: 1 },
+    { id: "8021696288406", slug: "mix-up-msp1-bianco-8406", name: "Mix Up Msp1 Bianco", family: "MIX-UP", collection: "pendant", price: 67.1, image: "https://www.ideal-lux.com/assets/products/web/288406_WEB001_MIX_UP_MSP1_BIANCO.png", finish: "BIANCO", material: "ME,PVC", size: "D 45 x H min 368 / max 2300 mm", watts: "E27 max1 x 60W", lights: 1 },
+    { id: "8021696279794", slug: "diesis-sp-ottone-9794", name: "Diesis Sp Ottone", family: "DIESIS", collection: "pendant", price: 134.2, image: "https://www.ideal-lux.com/assets/products/web/279794_WEB001_DIESIS_SP_OTTONE.png", finish: "OTTONE", material: "ME", size: "D 60 x H min 505 / max 2430 mm", watts: "LED 7W", lights: 1 },
+    { id: "8021696179858", slug: "dream-big-sp1-d30-9858", name: "Dream Big Sp1 D30", family: "DREAM BIG", collection: "pendant", price: 189.1, image: "https://www.ideal-lux.com/assets/products/web/179858_WEB001_DREAM_BIG_SP1_D30.png", finish: "BIANCO", material: "VE,TE", size: "D 300 x H min 900 / max 2690 mm", watts: "E27 max 1 x 42W", lights: 1 },
+  ]},
+  { slug: "wall", name: "Wall Lights", description: "Sconces and appliques that frame architecture.", cover: "https://www.ideal-lux.com/assets/products/web/097190_WEB001_FOCUS1_AP_NERO.png", products: [
+    { id: "8021696097190", slug: "focus-1-ap-nero-7190", name: "Focus-1 Ap Nero", family: "FOCUS", collection: "wall", price: 79.3, image: "https://www.ideal-lux.com/assets/products/web/097190_WEB001_FOCUS1_AP_NERO.png", finish: "NERO", material: "ME,PS", size: "D 100 x P min 280 / max 550 mm", watts: "LED 4W", lights: 1 },
+    { id: "8021696095998", slug: "look-ap2-round-d60-h150-nero-5998", name: "Look Ap2 Round D60 H150 Nero", family: "LOOK", collection: "wall", price: 79.3, image: "https://www.ideal-lux.com/assets/products/web/095998_WEB001_LOOK_AP2_NERO.png", finish: "NERO", material: "AL,ME,VE", size: "D 60 x H 180 x P 80 mm", watts: "GU10 max2 x 28W", lights: 2 },
+    { id: "8021696129464", slug: "xeno-ap1-nero-9464", name: "Xeno Ap1 Nero", family: "XENO", collection: "wall", price: 48.8, image: "https://www.ideal-lux.com/assets/products/web/129464_WEB001_XENO_AP1_NERO.png", finish: "NERO", material: "AL,ME", size: "L 90 x H 110 x P min 115 / max 135 mm", watts: "GU10 max 1 x 28W", lights: 1 },
+    { id: "8021696313252", slug: "binomio-led-pl2-nero-3252", name: "Binomio Led Pl2 Nero", family: "BINOMIO", collection: "wall", price: 122.0, image: "https://www.ideal-lux.com/assets/products/web/313252_WEB001_PING_PONG_AP2_NERO.png", finish: "NERO", material: "ME,VE", size: "L 183 x H 90 x P 60 mm", watts: "LED 6W", lights: 2 },
+    { id: "8021696034546", slug: "moris-ap2-4546", name: "Moris Ap2", family: "MORIS", collection: "wall", price: 109.8, image: "https://www.ideal-lux.com/assets/products/web/034546_WEB001_MORIS_AP2.png", finish: "BIANCO", material: "VE", size: "L 280 x H 65 x P 100 mm", watts: "G9 max 2 x 40W", lights: 2 },
+    { id: "8021696163321", slug: "frida-ap1-brunito-3321", name: "Frida Ap1 Brunito", family: "FRIDA", collection: "wall", price: 57.34, image: "https://www.ideal-lux.com/assets/products/web/163321_WEB001_FRIDA_AP1_BRUNITO.png", finish: "BRUNITO", material: "ME", size: "L 90 x H 210 x P 120 mm", watts: "E27 max 1 x 60W", lights: 1 },
+    { id: "8021696250120", slug: "lite-ap-ottone-0120", name: "Lite Ap Ottone", family: "LITE", collection: "wall", price: 84.18, image: "https://www.ideal-lux.com/assets/products/web/250120_WEB001_LITE_AP_OTTONE.png", finish: "OTTONE", material: "ME", size: "L 85 x H 85 x P 90 mm", watts: "LED 3W", lights: 1 },
+    { id: "8021696259826", slug: "set-up-map2-nero-9826", name: "Set Up Map2 Nero", family: "SET UP", collection: "wall", price: 128.1, image: "https://www.ideal-lux.com/assets/products/web/259826_WEB001_SET_UP_MAP2_NERO.png", finish: "NERO", material: "ME,AL", size: "L 105 x H 205 x P 195 mm", watts: "max 1 x 42W / 3W", lights: 2 },
+    { id: "8021696096667", slug: "polar-1-ap1-round-bianco-6667", name: "Polar-1 Ap1 Round Bianco", family: "POLAR", collection: "wall", price: 45.14, image: "https://www.ideal-lux.com/assets/products/web/096667_WEB001_POLAR1_AP1_BIANCO.png", finish: "BIANCO", material: "RE,PS", size: "D 300 x P 90 mm", watts: "E27 max 1 x 23W", lights: 1 },
+    { id: "8021696179308", slug: "zig-zag-ap-d53-square-bianco-3000k-9308", name: "Zig Zag Ap D53 Square Bianco 3000k", family: "ZIG ZAG", collection: "wall", price: 134.2, image: "https://www.ideal-lux.com/assets/products/web/179308_WEB001_ZIG_ZAG_AP_D53_3000K_BIANCO.png", finish: "BIANCO", material: "ME", size: "L 530 x H 75 x P 50 mm", watts: "23W", lights: 1 },
+    { id: "8021696287683", slug: "swipe-ap-antracite-7683", name: "Swipe Ap Antracite", family: "SWIPE", collection: "wall", price: 148.84, image: "https://www.ideal-lux.com/assets/products/web/287683_WEB001_SWIPE_AP_ANTRACITE.png", finish: "ANTRACITE", material: "ME,PS", size: "L 212 x H 100 x P min 120 / max 165 mm", watts: "LED 20,5W", lights: 1 },
+    { id: "8021696115368", slug: "twin-ap1-antracite-5368", name: "Twin Ap1 Antracite", family: "TWIN", collection: "wall", price: 67.1, image: "https://www.ideal-lux.com/assets/products/web/115368_WEB001_TWIN_AP1_ANTRACITE.png", finish: "ANTRACITE", material: "AL,ME", size: "L 165 x H 65 x P 115 mm", watts: "G9 max 1 x 28W", lights: 1 },
+    { id: "8021696129433", slug: "base-ap2-nero-9433", name: "Base Ap2 Nero", family: "BASE", collection: "wall", price: 48.8, image: "https://www.ideal-lux.com/assets/products/web/129433_WEB001_BASE_AP2_NERO.png", finish: "NERO", material: "AL,ME", size: "L 65 x H 180 x P 115 mm", watts: "GU10 max 2 x 28W", lights: 2 },
+    { id: "8021696167152", slug: "gim-ap-bianco-7152", name: "Gim Ap Bianco", family: "GIM", collection: "wall", price: 97.6, image: "https://www.ideal-lux.com/assets/products/web/167152_WEB001_GIM_AP_BIANCO.png", finish: "BIANCO", material: "AL,ME", size: "L 120 x H 120 x P 120 mm", watts: "LED 6,5W", lights: 1 },
+    { id: "8021696214696", slug: "flash-ap1-round-4696", name: "Flash Ap1 Round", family: "FLASH", collection: "wall", price: 54.9, image: "https://www.ideal-lux.com/assets/products/web/214696_WEB001_FLASH_GESSO_AP1_ROUND.png", finish: "BIANCO", material: "GE", size: "L 110 x H 180 x P 110 mm", watts: "G9 max 1 x 40W", lights: 1 },
+    { id: "8021696292410", slug: "perlage-ap1-bianco-2410", name: "Perlage Ap1 Bianco", family: "PERLAGE", collection: "wall", price: 91.5, image: "https://www.ideal-lux.com/assets/products/web/292410_WEB001_PERLAGE_AP1_BIANCO.png", finish: "BIANCO", material: "ME,VE", size: "L 100 x H 100 x P 133 mm", watts: "G9 max 1 x 15W", lights: 1 },
+    { id: "8021696097183", slug: "focus-1-ap-bianco-7183", name: "Focus-1 Ap Bianco", family: "FOCUS", collection: "wall", price: 79.3, image: "https://www.ideal-lux.com/assets/products/web/097183_WEB001_FOCUS1_AP_BIANCO.png", finish: "BIANCO", material: "ME,PS", size: "D 100 x P min 280 / max 550 mm", watts: "LED 4W", lights: 1 },
+    { id: "8021696033013", slug: "gun-ap2-small-alluminio-3013", name: "Gun Ap2 Small Alluminio", family: "GUN", collection: "wall", price: 79.3, image: "https://www.ideal-lux.com/assets/products/web/033013_WEB001_GUN_AP2_SMALL_ALLUMINIO.png", finish: "ALLUMINIO", material: "AL,ME", size: "L 65 x H 210 x P 110 mm", watts: "GU10 max 2 x 35W", lights: 2 },
+    { id: "8021696287300", slug: "piano-ap-nero-7300", name: "Piano Ap Nero", family: "PIANO", collection: "wall", price: 201.3, image: "https://www.ideal-lux.com/assets/products/web/287300_WEB001_PIANO_AP_NERO.png", finish: "NERO", material: "ME", size: "L 180 x H 120 x P 140 mm", watts: "LED 10W", lights: 2 },
+    { id: "8021696066868", slug: "andromeda-ap1-bianco-6868", name: "Andromeda Ap1 Bianco", family: "ANDROMEDA", collection: "wall", price: 67.1, image: "https://www.ideal-lux.com/assets/products/web/066868_WEB001_ANDROMEDA_AP1_BIANCO.png", finish: "BIANCO", material: "AL,ME", size: "L 220 x H 90 x P 120 mm", watts: "E27 max 1 x 60W", lights: 1 },
+    { id: "8021696250106", slug: "lite-ap-bianco-0106", name: "Lite Ap Bianco", family: "LITE", collection: "wall", price: 84.18, image: "https://www.ideal-lux.com/assets/products/web/250106_WEB001_LITE_AP_BIANCO.png", finish: "BIANCO", material: "ME", size: "L 85 x H 85 x P 90 mm", watts: "LED 3W", lights: 1 },
+    { id: "8021696345154", slug: "delta-led-ap-d030-bianco-3000k-5154", name: "Delta Led Ap D030 Bianco 3000k", family: "DELTA", collection: "wall", price: 79.3, image: "https://www.ideal-lux.com/assets/products/web/345154_WEB001_DELTA_AP_D030_3000K_BIANCO.png", finish: "BIANCO", material: "", size: "L 300 x H 35 x P 90 mm", watts: "10W", lights: 1 },
+    { id: "8021696229027", slug: "rudy-ap1-round-bianco-9027", name: "Rudy Ap1 Round Bianco", family: "RUDY", collection: "wall", price: 62.22, image: "https://www.ideal-lux.com/assets/products/web/229027_WEB001_RUDY_AP1_ROUND_BIANCO.png", finish: "BIANCO", material: "ME,AL", size: "L 70 x H 130 x P min 90 / max 115 mm", watts: "GU10 max 1 x 35W", lights: 1 },
+    { id: "8021696100395", slug: "gun-ap2-small-nero-0395", name: "Gun Ap2 Small Nero", family: "GUN", collection: "wall", price: 79.3, image: "https://www.ideal-lux.com/assets/products/web/100395_WEB001_GUN_AP2_SMALL_NERO.png", finish: "NERO", material: "AL,ME", size: "L 65 x H 210 x P 110 mm", watts: "GU10 max 2 x 35W", lights: 2 },
+  ]},
+  { slug: "ceiling", name: "Ceiling Lights", description: "Flush and semi-flush fixtures for ambient layers.", cover: "https://www.ideal-lux.com/assets/products/web/271545_WEB001_TOBY_PL1_NERO.png", products: [
+    { id: "8021696271545", slug: "toby-pl1-nero-1545", name: "Toby Pl1 Nero", family: "TOBY", collection: "ceiling", price: 75.64, image: "https://www.ideal-lux.com/assets/products/web/271545_WEB001_TOBY_PL1_NERO.png", finish: "NERO", material: "ME", size: "D 60 x H 130 mm", watts: "GU10 max 1 x 35W", lights: 1 },
+    { id: "8021696321752", slug: "universal-pl-d22-round-4000k-1752", name: "Universal Pl D22 Round 4000k", family: "UNIVERSAL", collection: "ceiling", price: 42.7, image: "https://www.ideal-lux.com/assets/products/web/321752_WEB001_UNIVERSAL_PL_D22_ROUND_4000K.png", finish: "BIANCO", material: "AL,ME,PS", size: "D 225 x H 40 mm", watts: "17W", lights: 1 },
+    { id: "8021696206004", slug: "nitro-pl-d08-round-nero-3000k-6004", name: "Nitro Pl D08 Round Nero 3000k", family: "NITRO", collection: "ceiling", price: 79.3, image: "https://www.ideal-lux.com/assets/products/web/206004_WEB001_NITRO_PL_ROUND_D08_NERO.png", finish: "NERO", material: "AL,ME", size: "D 80 x H 105 mm", watts: "LED 10W", lights: 1 },
+    { id: "8021696285238", slug: "spike-pl1-round-ottone-5238", name: "Spike Pl1 Round Ottone", family: "SPIKE", collection: "ceiling", price: 79.3, image: "https://www.ideal-lux.com/assets/products/web/285238_WEB001_SPIKE_PL1_ROUND_OTTONE.png", finish: "OTTONE", material: "ME", size: "D 100 x H 65 mm", watts: "GX53 max 1 x 15W", lights: 1 },
+    { id: "8021696155227", slug: "winery-pl1-bianco-5227", name: "Winery Pl1 Bianco", family: "WINERY", collection: "ceiling", price: 32.94, image: "https://www.ideal-lux.com/assets/products/web/155227_WEB001_WINERY_PL1_BIANCO.png", finish: "BIANCO", material: "CE", size: "D 75 x H 60 mm", watts: "E27 max 1 x 60W", lights: 1 },
+    { id: "8021696163666", slug: "gun-pl1-coffee-3666", name: "Gun Pl1 Coffee", family: "GUN", collection: "ceiling", price: 65.88, image: "https://www.ideal-lux.com/assets/products/web/163666_WEB001_GUN_PL1_COFFEE.png", finish: "COFFEE", material: "AL,ME", size: "D 110 x H 115 mm", watts: "GU10 max 1 x 28W", lights: 1 },
+    { id: "8021696303321", slug: "kubiko-pl-bianco-3321", name: "Kubiko Pl Bianco", family: "KUBIKO", collection: "ceiling", price: 98.82, image: "https://www.ideal-lux.com/assets/products/web/303321_WEB001_KUBIKO_PL_BIANCO.png", finish: "BIANCO", material: "ME,PS", size: "L 100 x H 115 x P 100 mm", watts: "LED 10W", lights: 1 },
+    { id: "8021696233079", slug: "look-pl1-round-d60-h200-bianco-3079", name: "Look Pl1 Round D60 H200 Bianco", family: "LOOK", collection: "ceiling", price: 39.04, image: "https://www.ideal-lux.com/assets/products/web/233079_WEB001_LOOK_PL1_H20_BIANCO.png", finish: "BIANCO", material: "ME", size: "D 60 x H 200 mm", watts: "GU10 max1 x 28W", lights: 1 },
+    { id: "8021696251554", slug: "techo-pl1-d09-square-antracite-1554", name: "Techo Pl1 D09 Square Antracite", family: "TECHO", collection: "ceiling", price: 78.08, image: "https://www.ideal-lux.com/assets/products/web/251554_WEB001_TECHO_PL1_SMALL_ANTRACITE.png", finish: "ANTRACITE", material: "ME,VE", size: "L 90 x H 95 x P 90 mm", watts: "GU10 max 1 x 20W", lights: 1 },
+    { id: "8021696251578", slug: "techo-pl1-d09-square-nero-1578", name: "Techo Pl1 D09 Square Nero", family: "TECHO", collection: "ceiling", price: 78.08, image: "https://www.ideal-lux.com/assets/products/web/251578_WEB001_TECHO_PL1_SMALL_NERO.png", finish: "NERO", material: "ME,VE", size: "L 90 x H 95 x P 90 mm", watts: "GU10 max 1 x 20W", lights: 1 },
+    { id: "8021696155142", slug: "winery-pl1-nero-5142", name: "Winery Pl1 Nero", family: "WINERY", collection: "ceiling", price: 32.94, image: "https://www.ideal-lux.com/assets/products/web/155142_WEB001_WINERY_PL1_NERO.png", finish: "NERO", material: "CE", size: "D 75 x H 60 mm", watts: "E27 max 1 x 60W", lights: 1 },
+    { id: "8021696032047", slug: "smarties-pl2-d42-2047", name: "Smarties Pl2 D42", family: "SMARTIES", collection: "ceiling", price: 207.4, image: "https://www.ideal-lux.com/assets/products/web/032047_WEB001_SMARTIES_PL2_D42.png", finish: "BIANCO", material: "VE", size: "D 425 x H 120 mm", watts: "E27 max 2 x 42W", lights: 2 },
+    { id: "8021696310664", slug: "binomio-ap1-nero-0664", name: "Binomio Ap1 Nero", family: "BINOMIO", collection: "ceiling", price: 67.1, image: "https://www.ideal-lux.com/assets/products/web/310664_WEB001_BINOMIO_AP1_NERO.png", finish: "NERO", material: "ME,VE", size: "L 333 x H 120 x P 150 mm", watts: "G9 max 1 x 4W", lights: 1 },
+    { id: "8021696297743", slug: "cotton-pl1-d30-7743", name: "Cotton Pl1 D30", family: "COTTON", collection: "ceiling", price: 152.5, image: "https://www.ideal-lux.com/assets/products/web/297743_WEB001_COTTON_PL1_D30.png", finish: "BIANCO", material: "AL,VE,ME", size: "D 300 x H 250 mm", watts: "E27 max 1 x 42W", lights: 1 },
+    { id: "8021696007977", slug: "simply-pl2-7977", name: "Simply Pl2", family: "SIMPLY", collection: "ceiling", price: 46.36, image: "https://www.ideal-lux.com/assets/products/web/007977_WEB001_SIMPLY_PL2.png", finish: "BIANCO", material: "VE", size: "D 300 x H 100 mm", watts: "E27 max 2 x 60W", lights: 2 },
+    { id: "8021696293783", slug: "ziggy-pl-d045-bianco-3783", name: "Ziggy Pl D045 Bianco", family: "ZIGGY", collection: "ceiling", price: 244.0, image: "https://www.ideal-lux.com/assets/products/web/293783_WEB001_ZIGGY_PL_D045_BIANCO.png", finish: "BIANCO", material: "ME,PS", size: "D 450 x H 110 mm", watts: "LED 30W", lights: 1 },
+    { id: "8021696320373", slug: "set-up-mpl4-0373", name: "Set Up Mpl4", family: "SET UP", collection: "ceiling", price: 97.6, image: "https://www.ideal-lux.com/assets/products/web/320373_WEB001_SET_UP_MPL4.png", finish: "BIANCO", material: "ME,AL", size: "D 310 x H 60 mm", watts: "E27 max4 x 15W", lights: 4 },
+    { id: "8021696229065", slug: "rudy-pl3-round-bianco-9065", name: "Rudy Pl3 Round Bianco", family: "RUDY", collection: "ceiling", price: 158.6, image: "https://www.ideal-lux.com/assets/products/web/229065_WEB001_RUDY_PL3_ROUND_BIANCO.png", finish: "BIANCO", material: "ME,AL", size: "L 540 x H min 90 / max 125 x P 125 mm", watts: "GU10 max 3 x 35W", lights: 3 },
+    { id: "8021696312347", slug: "planet-pl-d40-bianco-2347", name: "Planet Pl D40 Bianco", family: "PLANET", collection: "ceiling", price: 134.2, image: "https://www.ideal-lux.com/assets/products/web/312347_WEB001_PLANET_PL_D40_BIANCO.png", finish: "BIANCO", material: "ME,PS", size: "D 400 x H 50 mm", watts: "LED 20W", lights: 1 },
+    { id: "8021696328478", slug: "binomio-ap1-bianco-8478", name: "Binomio Ap1 Bianco", family: "BINOMIO", collection: "ceiling", price: 67.1, image: "https://www.ideal-lux.com/assets/products/web/328478_WEB001_BINOMIO_AP1_BIANCO.png", finish: "BIANCO", material: "ME,VE", size: "L 333 x H 120 x P 150 mm", watts: "G9 max 1 x 4W", lights: 1 },
+    { id: "8021696231495", slug: "dynamite-ap1-round-bianco-1495", name: "Dynamite Ap1 Round Bianco", family: "DYNAMITE", collection: "ceiling", price: 46.36, image: "https://www.ideal-lux.com/assets/products/web/231495_WEB001_DYNAMITE_PL1_BIANCO.png", finish: "BIANCO", material: "ME", size: "D 55 x P 165 mm", watts: "GU10 max1 x 28W", lights: 1 },
+    { id: "8021696353821", slug: "look-pl1-round-d60-h100-nero-3821", name: "Look Pl1 Round D60 H100 Nero", family: "LOOK", collection: "ceiling", price: 35.38, image: "https://www.ideal-lux.com/assets/products/web/353821_WEB001_LOOK_PL1_ROUND_D60_H100_NERO.png", finish: "NERO", material: "AL,ME,VE", size: "D 60 x H 100 mm", watts: "GU10 max1 x 28W", lights: 1 },
+    { id: "8021696231471", slug: "dynamite-ap1-round-nero-1471", name: "Dynamite Ap1 Round Nero", family: "DYNAMITE", collection: "ceiling", price: 46.36, image: "https://www.ideal-lux.com/assets/products/web/231471_WEB001_DYNAMITE_PL1_NERO.png", finish: "NERO", material: "ME", size: "D 55 x P 165 mm", watts: "GU10 max1 x 28W", lights: 1 },
+    { id: "8021696243924", slug: "mood-pl1-d09-round-nero-3924", name: "Mood Pl1 D09 Round Nero", family: "MOOD", collection: "ceiling", price: 78.08, image: "https://www.ideal-lux.com/assets/products/web/243924_WEB001_MOOD_PL1_D09_ROUND_NERO.png", finish: "NERO", material: "AL,ME", size: "D 90 x H 105 mm", watts: "GU10 max 1 x 28W", lights: 1 },
+  ]},
+  { slug: "floor", name: "Floor Lights", description: "Statement floor lamps that ground a space.", cover: "https://www.ideal-lux.com/assets/products/web/026985_WEB001_TRONCO_PT1_H60_ANTRACITE.png", products: [
+    { id: "8021696026985", slug: "tronco-pt1-h60-antracite-6985", name: "Tronco Pt1 H60 Antracite", family: "TRONCO", collection: "floor", price: 168.36, image: "https://www.ideal-lux.com/assets/products/web/026985_WEB001_TRONCO_PT1_H60_ANTRACITE.png", finish: "ANTRACITE", material: "AL,ME", size: "D 155 x H 605 mm", watts: "E27 max 1 x 42W", lights: 1 },
+    { id: "8021696163758", slug: "tronco-pt1-h60-coffee-3758", name: "Tronco Pt1 H60 Coffee", family: "TRONCO", collection: "floor", price: 168.36, image: "https://www.ideal-lux.com/assets/products/web/163758_WEB001_TRONCO_PT1_H60_COFFEE.png", finish: "COFFEE", material: "AL,ME", size: "D 155 x H 605 mm", watts: "E27 max 1 x 42W", lights: 1 },
+    { id: "8021696306780", slug: "jedi-pt-h080-antracite-6780", name: "Jedi Pt H080 Antracite", family: "JEDI", collection: "floor", price: 115.9, image: "https://www.ideal-lux.com/assets/products/web/306780_WEB001_JEDI_PT_H080_ANTRACITE.png", finish: "ANTRACITE", material: "ME,VE", size: "L 25 x H 805 x P 25 mm", watts: "12W", lights: 1 },
+    { id: "8021696250953", slug: "tifone-pt-h65-0953", name: "Tifone Pt H65", family: "TIFONE", collection: "floor", price: 151.28, image: "https://www.ideal-lux.com/assets/products/web/250953_WEB001_TIFONE_PT_H65.png", finish: "ANTRACITE", material: "AL,ME,VE", size: "L 85 x H 655 x P 85 mm", watts: "LED 8,5W", lights: 1 },
+    { id: "8021696254319", slug: "agos-pt-h80-antracite-3000k-4319", name: "Agos Pt H80 Antracite 3000k", family: "AGOS", collection: "floor", price: 124.44, image: "https://www.ideal-lux.com/assets/products/web/254319_WEB001_AGOS_PT_H80_3000K_ANTRACITE.png", finish: "ANTRACITE", material: "AL,ME", size: "L 95 x H 800 x P 150 mm", watts: "6,5W", lights: 1 },
+    { id: "8021696191638", slug: "sole-pt1-d30-1638", name: "Sole Pt1 D30", family: "SOLE", collection: "floor", price: 146.4, image: "https://www.ideal-lux.com/assets/products/web/191638_WEB001_SOLE_PT1_D30.png", finish: "BIANCO", material: "PS", size: "D 300 x H 300 mm", watts: "E27 max 1 x 42W", lights: 1 },
+    { id: "8021696115078", slug: "sirio-pt1-h60-antracite-5078", name: "Sirio Pt1 H60 Antracite", family: "SIRIO", collection: "floor", price: 158.6, image: "https://www.ideal-lux.com/assets/products/web/115078_WEB001_SIRIO_PT2_H60_ANTRACITE.png", finish: "ANTRACITE", material: "AL,ME", size: "L 100 x H 600 x P 150 mm", watts: "GX53 max 1 x 9W", lights: 1 },
+    { id: "8021696161761", slug: "sasso-pt1-d33-1761", name: "Sasso Pt1 D33", family: "SASSO", collection: "floor", price: 176.9, image: "https://www.ideal-lux.com/assets/products/web/161761_WEB001_SASSO_PT1_D33.png", finish: "BIANCO", material: "PS", size: "L 330 x H 190 x P 250 mm", watts: "E27 max 1 x 40W", lights: 1 },
+    { id: "8021696347875", slug: "twiggy-line-pt-h74-coffee-7875", name: "Twiggy Line Pt H74 Coffee", family: "TWIGGY", collection: "floor", price: 57.34, image: "https://www.ideal-lux.com/assets/products/web/347875_WEB001_TWIGGY_LINE_PT_H74_COFFEE.png", finish: "COFFEE", material: "VE,ME,AL", size: "D 18 x H 740 mm", watts: "LED 1,5W", lights: 1 },
+    { id: "8021696304168", slug: "comet-pt-nero-4168", name: "Comet Pt Nero", family: "COMET", collection: "floor", price: 359.9, image: "https://www.ideal-lux.com/assets/products/web/304168_WEB001_COMET_PT_NERO.png", finish: "NERO", material: "ME", size: "L 400 x H 2100 x P 2000 mm", watts: "LED 30W", lights: 1 },
+    { id: "8021696004723", slug: "tronco-pt1-h80-nero-4723", name: "Tronco Pt1 H80 Nero", family: "TRONCO", collection: "floor", price: 195.2, image: "https://www.ideal-lux.com/assets/products/web/004723_WEB001_TRONCO_PT1_H80_NERO.png", finish: "NERO", material: "AL,ME", size: "D 155 x H 805 mm", watts: "E27 max 1 x 42W", lights: 1 },
+    { id: "8021696304649", slug: "comet-pt-bianco-4649", name: "Comet Pt Bianco", family: "COMET", collection: "floor", price: 359.9, image: "https://www.ideal-lux.com/assets/products/web/304649_WEB001_COMET_PT_BIANCO.png", finish: "BIANCO", material: "ME", size: "L 400 x H 2100 x P 2000 mm", watts: "LED 30W", lights: 1 },
+    { id: "8021696306858", slug: "kurt-pt-coffee-3000k-6858", name: "Kurt Pt Coffee 3000k", family: "KURT", collection: "floor", price: 154.94, image: "https://www.ideal-lux.com/assets/products/web/306858_WEB001_KURT_PT_COFFEE_3000K.png", finish: "COFFEE", material: "ME", size: "L 85 x H 650 x P 85 mm", watts: "11W", lights: 1 },
+    { id: "8021696259970", slug: "set-up-mpt1-nero-9970", name: "Set Up Mpt1 Nero", family: "SET UP", collection: "floor", price: 202.52, image: "https://www.ideal-lux.com/assets/products/web/259970_WEB001_SET_UP_MPT1_NERO.png", finish: "NERO", material: "ME,AL", size: "D 280 x H 1450 mm", watts: "E27 max1 x 42W", lights: 1 },
+    { id: "8021696198620", slug: "atena-pt1-nero-8620", name: "Atena Pt1 Nero", family: "ATENA", collection: "floor", price: 106.14, image: "https://www.ideal-lux.com/assets/products/web/198620_WEB001_ATENA_PT1_NERO.png", finish: "NERO", material: "RE,PS", size: "D 155 x H 800 mm", watts: "E27 max 1 x 23W", lights: 1 },
+    { id: "8021696204956", slug: "futura-pt-alluminio-4956", name: "Futura Pt Alluminio", family: "FUTURA", collection: "floor", price: 152.5, image: "https://www.ideal-lux.com/assets/products/web/204956_WEB001_FUTURA_PT_ALLUMINIO.png", finish: "ALLUMINIO", material: "AL,ME,PS", size: "L 670 x H 1450 x P 250 mm", watts: "LED 12,5W", lights: 1 },
+    { id: "8021696293189", slug: "jedi-pt-h080-nero-3189", name: "Jedi Pt H080 Nero", family: "JEDI", collection: "floor", price: 115.9, image: "https://www.ideal-lux.com/assets/products/web/293189_WEB001_JEDI_PT_H080_NERO.png", finish: "NERO", material: "ME,VE", size: "L 25 x H 805 x P 25 mm", watts: "12W", lights: 1 },
+    { id: "8021696272085", slug: "futura-pt-bianco-2085", name: "Futura Pt Bianco", family: "FUTURA", collection: "floor", price: 152.5, image: "https://www.ideal-lux.com/assets/products/web/272085_WEB001_FUTURA_PT_BIANCO.png", finish: "BIANCO", material: "AL,ME,PS", size: "L 670 x H 1450 x P 250 mm", watts: "LED 12,5W", lights: 1 },
+    { id: "8021696306834", slug: "kurt-pt-antracite-3000k-6834", name: "Kurt Pt Antracite 3000k", family: "KURT", collection: "floor", price: 154.94, image: "https://www.ideal-lux.com/assets/products/web/306834_WEB001_KURT_PT_ANTRACITE_3000K.png", finish: "ANTRACITE", material: "ME", size: "L 85 x H 650 x P 85 mm", watts: "11W", lights: 1 },
+    { id: "8021696258904", slug: "yoko-pt-nero-8904", name: "Yoko Pt Nero", family: "YOKO", collection: "floor", price: 183.0, image: "https://www.ideal-lux.com/assets/products/web/258904_WEB001_YOKO_PT_NERO.png", finish: "NERO", material: "AL,ME,PS", size: "D 200 x H 1465 mm", watts: "LED 16W", lights: 1 },
+    { id: "8021696326726", slug: "agos-pt-h80-coffee-3000k-6726", name: "Agos Pt H80 Coffee 3000k", family: "AGOS", collection: "floor", price: 124.44, image: "https://www.ideal-lux.com/assets/products/web/326726_WEB001_AGOS_PT_H80_3000K_COFFEE.png", finish: "COFFEE", material: "AL,ME", size: "L 95 x H 800 x P 150 mm", watts: "6,5W", lights: 1 },
+    { id: "8021696322278", slug: "etere-pt-nero-4000k-2278", name: "Etere Pt Nero 4000k", family: "ETERE", collection: "floor", price: 147.62, image: "https://www.ideal-lux.com/assets/products/web/322278_WEB001_ETERE_PT_NERO_4000K.png", finish: "NERO", material: "AL,ME,PS", size: "D 120 x H 605 mm", watts: "9,5W", lights: 1 },
+    { id: "8021696348360", slug: "twiggy-sphere-pt-h90-nero-8360", name: "Twiggy Sphere Pt H90 Nero", family: "TWIGGY", collection: "floor", price: 76.86, image: "https://www.ideal-lux.com/assets/products/web/348360_WEB001_TWIGGY_SPHERE_PT_H90_NERO.png", finish: "NERO", material: "VE,ME,AL", size: "D 45 x H 900 mm", watts: "LED 1,5W", lights: 1 },
+    { id: "8021696213279", slug: "sirio-pt1-h60-coffee-3279", name: "Sirio Pt1 H60 Coffee", family: "SIRIO", collection: "floor", price: 158.6, image: "https://www.ideal-lux.com/assets/products/web/213279_WEB001_SIRIO_PT2_H60_COFFEE.png", finish: "COFFEE", material: "AL,ME", size: "L 100 x H 600 x P 150 mm", watts: "GX53 max 1 x 9W", lights: 1 },
+  ]},
+  { slug: "table", name: "Table Lights", description: "Intimate light for desks, consoles and bedsides.", cover: "https://www.ideal-lux.com/assets/products/web/286723_WEB001_LOLITA_TL_BIANCO.png", products: [
+    { id: "8021696286723", slug: "lolita-tl-bianco-6723", name: "Lolita Tl Bianco", family: "LOLITA", collection: "table", price: 68.32, image: "https://www.ideal-lux.com/assets/products/web/286723_WEB001_LOLITA_TL_BIANCO.png", finish: "BIANCO", material: "ME,AL,PS", size: "D 125 x H 345 mm", watts: "LED 1,8W", lights: 1 },
+    { id: "8021696295534", slug: "easy-tl-nero-5534", name: "Easy Tl Nero", family: "EASY", collection: "table", price: 109.8, image: "https://www.ideal-lux.com/assets/products/web/295534_WEB001_EASY_TL_NERO.png", finish: "NERO", material: "ME", size: "L 127 x H 460 x P 260 mm", watts: "LED 3,5W", lights: 1 },
+    { id: "8021696204888", slug: "futura-tl-nero-4888", name: "Futura Tl Nero", family: "FUTURA", collection: "table", price: 122.0, image: "https://www.ideal-lux.com/assets/products/web/204888_WEB001_FUTURA_TL_NERO.png", finish: "NERO", material: "AL,ME,PS", size: "L 580 x H 655 x P 185 mm", watts: "LED 12,5W", lights: 1 },
+    { id: "8021696245393", slug: "kali-3-tl1-5393", name: "Kali'-3 Tl1", family: "KALI'", collection: "table", price: 34.16, image: "https://www.ideal-lux.com/assets/products/web/245393_WEB001_KALI3_TL1.png", finish: "BIANCO", material: "ME,TE", size: "D 150 x H 320 mm", watts: "E14 max 1 x 40W", lights: 1 },
+    { id: "8021696009155", slug: "mapa-bianco-tl1-d20-9155", name: "Mapa Bianco Tl1 D20", family: "MAPA", collection: "table", price: 61.0, image: "https://www.ideal-lux.com/assets/products/web/009155_WEB001_MAPA_BIANCO_TL1_D20.png", finish: "BIANCO", material: "ME,VE", size: "D 200 x H 210 mm", watts: "E27 max 1 x 42W", lights: 1 },
+    { id: "8021696289151", slug: "pivot-tl-nero-9151", name: "Pivot Tl Nero", family: "PIVOT", collection: "table", price: 98.82, image: "https://www.ideal-lux.com/assets/products/web/289151_WEB001_PIVOT_TL_NERO.png", finish: "NERO", material: "PS", size: "L 170 x H min 430 / max 760 x P 410 mm", watts: "LED 7W", lights: 1 },
+    { id: "8021696289168", slug: "pivot-tl-bianco-9168", name: "Pivot Tl Bianco", family: "PIVOT", collection: "table", price: 98.82, image: "https://www.ideal-lux.com/assets/products/web/289168_WEB001_PIVOT_TL_BIANCO.png", finish: "BIANCO", material: "PS", size: "L 170 x H min 430 / max 760 x P 410 mm", watts: "LED 7W", lights: 1 },
+    { id: "8021696272078", slug: "futura-tl-bianco-2078", name: "Futura Tl Bianco", family: "FUTURA", collection: "table", price: 122.0, image: "https://www.ideal-lux.com/assets/products/web/272078_WEB001_FUTURA_TL_BIANCO.png", finish: "BIANCO", material: "AL,ME,PS", size: "L 580 x H 655 x P 185 mm", watts: "LED 12,5W", lights: 1 },
+    { id: "8021696286716", slug: "lolita-tl-nero-6716", name: "Lolita Tl Nero", family: "LOLITA", collection: "table", price: 68.32, image: "https://www.ideal-lux.com/assets/products/web/286716_WEB001_LOLITA_TL_NERO.png", finish: "NERO", material: "ME,AL,PS", size: "D 125 x H 345 mm", watts: "LED 1,8W", lights: 1 },
+    { id: "8021696311678", slug: "pure-tl-nero-1678", name: "Pure Tl Nero", family: "PURE", collection: "table", price: 104.92, image: "https://www.ideal-lux.com/assets/products/web/311678_WEB001_PURE_TL1_NERO.png", finish: "NERO", material: "ME,PS", size: "D 115 x H 320 mm", watts: "LED 1,5W", lights: 1 },
+    { id: "8021696286747", slug: "lolita-tl-coffee-6747", name: "Lolita Tl Coffee", family: "LOLITA", collection: "table", price: 68.32, image: "https://www.ideal-lux.com/assets/products/web/286747_WEB001_LOLITA_TL_COFFEE.png", finish: "COFFEE", material: "ME,AL,PS", size: "D 125 x H 345 mm", watts: "LED 1,8W", lights: 1 },
+    { id: "8021696346908", slug: "cute-tl-nero-6908", name: "Cute Tl Nero", family: "CUTE", collection: "table", price: 104.92, image: "https://www.ideal-lux.com/assets/products/web/346908_WEB001_CUTE_TL_NERO.png", finish: "NERO", material: "", size: "D 75 x H 208 mm", watts: "LED 2,5W", lights: 1 },
+    { id: "8021696346915", slug: "cute-tl-coffee-6915", name: "Cute Tl Coffee", family: "CUTE", collection: "table", price: 104.92, image: "https://www.ideal-lux.com/assets/products/web/346915_WEB001_CUTE_TL_COFFEE.png", finish: "COFFEE", material: "", size: "D 75 x H 208 mm", watts: "LED 2,5W", lights: 1 },
+    { id: "8021696204895", slug: "futura-tl-alluminio-4895", name: "Futura Tl Alluminio", family: "FUTURA", collection: "table", price: 122.0, image: "https://www.ideal-lux.com/assets/products/web/204895_WEB001_FUTURA_TL_ALLUMINIO.png", finish: "ALLUMINIO", material: "AL,ME,PS", size: "L 580 x H 655 x P 185 mm", watts: "LED 12,5W", lights: 1 },
+    { id: "8021696074726", slug: "prato-tl1-small-4726", name: "Prato Tl1 Small", family: "PRATO", collection: "table", price: 62.22, image: "https://www.ideal-lux.com/assets/products/web/074726_WEB001_PRATO_TL1_SMALL.png", finish: "BIANCO", material: "VE", size: "D 165 x H 185 mm", watts: "E14 max 1 x 40W", lights: 1 },
+    { id: "8021696311715", slug: "toffee-tl-bianco-1715", name: "Toffee Tl Bianco", family: "TOFFEE", collection: "table", price: 109.8, image: "https://www.ideal-lux.com/assets/products/web/311715_WEB001_TOFFEE_TL_BIANCO.png", finish: "BIANCO", material: "ME", size: "D 120 x H 320 mm", watts: "LED 2W", lights: 1 },
+    { id: "8021696286730", slug: "lolita-tl-cool-grey-6730", name: "Lolita Tl Cool Grey", family: "LOLITA", collection: "table", price: 68.32, image: "https://www.ideal-lux.com/assets/products/web/286730_WEB001_LOLITA_TL_COOL_GREY.png", finish: "GRIGIO", material: "ME,AL,PS", size: "D 125 x H 345 mm", watts: "LED 1,8W", lights: 1 },
+    { id: "8021696259956", slug: "set-up-mtl1-big-ottone-9956", name: "Set Up Mtl1 Big Ottone", family: "SET UP", collection: "table", price: 109.8, image: "https://www.ideal-lux.com/assets/products/web/259956_WEB001_SET_UP_MTL1_BIG_OTTONE.png", finish: "OTTONE", material: "ME,AL", size: "D 200 x H 330 mm", watts: "E27 max1 x 42W", lights: 1 },
+    { id: "8021696328614", slug: "toffee-tl-nero-8614", name: "Toffee Tl Nero", family: "TOFFEE", collection: "table", price: 109.8, image: "https://www.ideal-lux.com/assets/products/web/328614_WEB001_TOFFEE_TL_NERO.png", finish: "NERO", material: "ME", size: "D 120 x H 320 mm", watts: "LED 2W", lights: 1 },
+    { id: "8021696347868", slug: "toffee-tl-coffee-7868", name: "Toffee Tl Coffee", family: "TOFFEE", collection: "table", price: 109.8, image: "https://www.ideal-lux.com/assets/products/web/347868_WEB001_TOFFEE_TL_COFFEE.png", finish: "COFFEE", material: "VE,ME,AL", size: "D 120 x H 320 mm", watts: "LED 2W", lights: 1 },
+    { id: "8021696283333", slug: "diesis-tl-nero-3333", name: "Diesis Tl Nero", family: "DIESIS", collection: "table", price: 183.0, image: "https://www.ideal-lux.com/assets/products/web/283333_WEB001_DIESIS_TL_NERO.png", finish: "NERO", material: "ME,VE", size: "L 190 x H 655 x P 430 mm", watts: "LED 6,5W", lights: 1 },
+    { id: "8021696365756", slug: "arcadia-tl1-bianco-5756", name: "Arcadia Tl1 Bianco", family: "ARCADIA", collection: "table", price: 142.74, image: "https://www.ideal-lux.com/assets/products/web/365756_WEB001_ARCADIA_TL1_BIANCO.png", finish: "BIANCO", material: "ME,PS", size: "D 280 x H 529 mm", watts: "E27 max 1 x 42W", lights: 1 },
+    { id: "8021696343488", slug: "diamond-tl1-3488", name: "Diamond Tl1", family: "DIAMOND", collection: "table", price: 109.8, image: "https://www.ideal-lux.com/assets/products/web/343488_WEB001_DIAMOND_TL1.png", finish: "TRASPARENT", material: "AL,PS", size: "D 110 x H 120 mm", watts: "LED 2W", lights: 1 },
+    { id: "8021696032078", slug: "smarties-tl1-d14-2078", name: "Smarties Tl1 D14", family: "SMARTIES", collection: "table", price: 61.0, image: "https://www.ideal-lux.com/assets/products/web/032078_WEB001_SMARTIES_TL1_D14.png", finish: "BIANCO", material: "VE", size: "D 140 x H 70 mm", watts: "G9 max 1 x 15W", lights: 1 },
+  ]},
+  { slug: "track", name: "Track Lights", description: "Directional lighting for galleries and kitchens.", cover: "https://www.ideal-lux.com/assets/products/web/267784_WEB001_FOX_15W_CRI80_4000K_ONOFF_WH.png", products: [
+    { id: "8021696267784", slug: "fox-tr-3-phase-15w-cri80-4000k-on-off-bianco-7784", name: "Fox Tr 3-phase 15w Cri80 4000k On-off Bianco", family: "FOX", collection: "track", price: 61.0, image: "https://www.ideal-lux.com/assets/products/web/267784_WEB001_FOX_15W_CRI80_4000K_ONOFF_WH.png", finish: "BIANCO", material: "AL,ME,PS", size: "L 75 x H 172 x P 60 mm", watts: "15W", lights: 1 },
+    { id: "8021696371450", slug: "dynamite-tr-3-phase-mini-round-bianco-1450", name: "Dynamite Tr 3-phase Mini Round Bianco", family: "DYNAMITE", collection: "track", price: 30.5, image: "https://www.ideal-lux.com/assets/products/web/371450_WEB001_DYNAMITE_TR_3-PHASE_MINI_ROUND_BIANCO.png", finish: "BIANCO", material: "ME,AL", size: "L 72 x H 155 x P 40 mm", watts: "GU10 max1 x 28W", lights: 1 },
+    { id: "8021696271446", slug: "fox-tr-3-phase-08w-cri80-4000k-on-off-nero-1446", name: "Fox Tr 3-phase 08w Cri80 4000k On-off Nero", family: "FOX", collection: "track", price: 54.9, image: "https://www.ideal-lux.com/assets/products/web/271446_WEB001_FOX_08W_CRI80_4000K_ONOFF_BK.png", finish: "NERO", material: "AL,ME,PS", size: "L 75 x H 167 x P 51 mm", watts: "8W", lights: 1 },
+    { id: "8021696286594", slug: "eos-tr-3-phase-15w-3000k-on-off-bi-6594", name: "Eos Tr 3-phase 15w 3000k On-off Bi", family: "EOS", collection: "track", price: 89.06, image: "https://www.ideal-lux.com/assets/products/web/286594_WEB001_EOS_15W_3000K_ONOFF_WH.png", finish: "BIANCO", material: "AL,ME,PS", size: "L 62 x H 217 x P 70 mm", watts: "15W", lights: 1 },
+    { id: "8021696243269", slug: "link-3-phase-trimless-binario-1-mt-on-off-bianco-3269", name: "Link 3-phase Trimless Binario 1 Mt On-off Bianco", family: "LINK", collection: "track", price: 36.6, image: "https://www.ideal-lux.com/assets/products/web/243269_WEB001_LINK_TRIMLESS_PROFILE_1000mm_ONOFF_WH.png", finish: "BIANCO", material: "AL,PS", size: "L 1000 x H 36 x P 35 mm", watts: "", lights: 0 },
+    { id: "8021696231631", slug: "look-tr-3-phase-nero-1631", name: "Look Tr 3-phase Nero", family: "LOOK", collection: "track", price: 97.6, image: "https://www.ideal-lux.com/assets/products/web/231631_WEB001_LOOK_TRACK_NERO.png", finish: "NERO", material: "ME", size: "L 60 x H 2500 x P 83 mm", watts: "GU10 max 1 x 28W", lights: 1 },
+    { id: "8021696283937", slug: "fox-tr-3-phase-15w-cri80-3000k-on-off-ottone-3937", name: "Fox Tr 3-phase 15w Cri80 3000k On-off Ottone", family: "FOX", collection: "track", price: 67.1, image: "https://www.ideal-lux.com/assets/products/web/283937_WEB001_FOX_15W_CRI80_3000K_ONOFF_GD.png", finish: "OTTONE", material: "AL,ME,PS", size: "L 70 x H 204 x P 60 mm", watts: "15W", lights: 1 },
+    { id: "8021696246901", slug: "link-3-phase-trimless-binario-2-mt-1-10v-dali-ne-6901", name: "Link 3-phase Trimless Binario 2 Mt 1-10v/dali Ne", family: "LINK", collection: "track", price: 97.6, image: "https://www.ideal-lux.com/assets/products/web/246901_WEB001_LINK_TRIMLESS_PROFILE_2000mm_DALI_1_10V_BK.png", finish: "NERO", material: "AL,PS", size: "L 2000 x H 36 x P 35 mm", watts: "", lights: 0 },
+    { id: "8021696322100", slug: "eos-tr-3-phase-25w-4000k-on-off-ne-2100", name: "Eos Tr 3-phase 25w 4000k On-off Ne", family: "EOS", collection: "track", price: 112.24, image: "https://www.ideal-lux.com/assets/products/web/322100_WEB001_EOS_25W_4000K_ONOFF_BK.png", finish: "NERO", material: "AL,ME,PS", size: "L 72 x H 230 x P 70 mm", watts: "25W", lights: 1 },
+    { id: "8021696283760", slug: "display-wide-d0565-on-off-3000k-nero-3760", name: "Display Wide D0565 On-off 3000k Nero", family: "DISPLAY", collection: "track", price: 170.8, image: "https://www.ideal-lux.com/assets/products/web/283760_WEB001_DISPLAY_WIDE_D0565_3000K_BK.png", finish: "NERO", material: "ME,AL", size: "L 565 x H 62 x P 32 mm", watts: "21W", lights: 1 },
+    { id: "8021696189703", slug: "smile-tr-3-phase-30w-cri80-24-3000k-ne-9703", name: "Smile Tr 3-phase 30w Cri80 24° 3000k Ne", family: "SMILE", collection: "track", price: 183.0, image: "https://www.ideal-lux.com/assets/products/web/189703_WEB001_SMILE_30W_CRI80_24_3000K_BK.png", finish: "NERO", material: "AL,ME", size: "L 80 x H 285 x P 87 mm", watts: "30W", lights: 1 },
+    { id: "8021696344942", slug: "spike-tr-3-phase-bianco-4942", name: "Spike Tr 3-phase Bianco", family: "SPIKE", collection: "track", price: 73.2, image: "https://www.ideal-lux.com/assets/products/web/344942_WEB001_SPIKE_TR_3-PHASE_BIANCO.png", finish: "BIANCO", material: "ME,PS", size: "L 110 x H 145 x P 100 mm", watts: "GX53 max1 x 9W", lights: 1 },
+    { id: "8021696364704", slug: "play-tr-3-phase-13w-3000k-bianco-4704", name: "Play Tr 3-phase 13w 3000k Bianco", family: "PLAY", collection: "track", price: 91.5, image: "https://www.ideal-lux.com/assets/products/web/364704_WEB001_PLAY_TR_3-PHASE_13W_3000K_BIANCO.png", finish: "BIANCO", material: "AL,ME,PS", size: "L 128 x H 164 x P 47 mm", watts: "13W", lights: 1 },
+    { id: "8021696189697", slug: "smile-tr-3-phase-30w-cri80-24-3000k-bi-9697", name: "Smile Tr 3-phase 30w Cri80 24° 3000k Bi", family: "SMILE", collection: "track", price: 183.0, image: "https://www.ideal-lux.com/assets/products/web/189697_WEB001_SMILE_30W_CRI80_24_3000K_WH.png", finish: "BIANCO", material: "AL,ME", size: "L 80 x H 285 x P 87 mm", watts: "30W", lights: 1 },
+    { id: "8021696370903", slug: "play-tr-3-phase-07w-3000k-nero-0903", name: "Play Tr 3-phase 07w 3000k Nero", family: "PLAY", collection: "track", price: 85.4, image: "https://www.ideal-lux.com/assets/products/web/370903_WEB001_PLAY_TR_3-PHASE_07W_3000K_NERO.png", finish: "NERO", material: "AL,ME,PS", size: "L 128 x H 164 x P 47 mm", watts: "7W", lights: 1 },
+    { id: "8021696296364", slug: "pov-tr-3-phase-square-bianco-6364", name: "Pov Tr 3-phase Square Bianco", family: "POV", collection: "track", price: 164.7, image: "https://www.ideal-lux.com/assets/products/web/296364_WEB001_POV_TRACK_SQUARE_WH.png", finish: "BIANCO", material: "ME,VE", size: "L 162 x H 159 x P 37 mm", watts: "22W", lights: 1 },
+    { id: "8021696231662", slug: "look-tr-3-phase-bianco-1662", name: "Look Tr 3-phase Bianco", family: "LOOK", collection: "track", price: 97.6, image: "https://www.ideal-lux.com/assets/products/web/231662_WEB001_LOOK_TRACK_BIANCO.png", finish: "BIANCO", material: "ME", size: "L 60 x H 2500 x P 83 mm", watts: "GU10 max 1 x 28W", lights: 1 },
+    { id: "8021696283555", slug: "display-accent-d1595-on-off-3000k-bianco-3555", name: "Display Accent D1595 On-off 3000k Bianco", family: "DISPLAY", collection: "track", price: 451.4, image: "https://www.ideal-lux.com/assets/products/web/283555_WEB001_DISPLAY_ACCENT_D1595_3000K_WH.png", finish: "BIANCO", material: "ME,AL", size: "L 1595 x H 73 x P 32 mm", watts: "42W", lights: 1 },
+    { id: "8021696296333", slug: "pov-tr-3-phase-round-nero-6333", name: "Pov Tr 3-phase Round Nero", family: "POV", collection: "track", price: 164.7, image: "https://www.ideal-lux.com/assets/products/web/296333_WEB001_POV_TRACK_ROUND_BK.png", finish: "NERO", material: "ME,VE", size: "L 162 x H 159 x P 37 mm", watts: "22W", lights: 1 },
+    { id: "8021696336626", slug: "spike-tr-3-phase-nero-6626", name: "Spike Tr 3-phase Nero", family: "SPIKE", collection: "track", price: 73.2, image: "https://www.ideal-lux.com/assets/products/web/336626_WEB001_SPIKE_TR_3-PHASE_NERO.png", finish: "NERO", material: "ME,PS", size: "L 110 x H 145 x P 100 mm", watts: "GX53 max1 x 9W", lights: 1 },
+  ]},
 ];
 
-export const products: Product[] = [
-  {
-    slug: "orbit-pendant",
-    name: "Orbit Pendant",
-    collection: "modern",
-    type: "Pendant",
-    price: 289,
-    finishes: ["Brushed brass", "Matte black", "Polished nickel"],
-    image: product1,
-    description:
-      "A single opal globe suspended from a slender brass collar. Designed to hang in pairs over a kitchen island or alone above a stairwell.",
-    specs: [
-      { label: "Diameter", value: "180 mm" },
-      { label: "Drop", value: "Adjustable 400–1800 mm" },
-      { label: "Bulb", value: "1 × E27, max 60W" },
-      { label: "Material", value: "Solid brass, opal glass" },
-    ],
-  },
-  {
-    slug: "aurelia-chandelier",
-    name: "Aurelia Chandelier",
-    collection: "classic",
-    type: "Chandelier",
-    price: 1480,
-    finishes: ["Aged brass", "Antique gold"],
-    image: product2,
-    description:
-      "Seven candle arms strung with hand-cut crystal pendants. A reissue of an 1890s Venetian model, made today in our Brescia workshop.",
-    specs: [
-      { label: "Diameter", value: "720 mm" },
-      { label: "Height", value: "880 mm" },
-      { label: "Bulbs", value: "7 × E14, max 40W" },
-      { label: "Material", value: "Brass, lead crystal" },
-    ],
-  },
-  {
-    slug: "harbor-wall-lantern",
-    name: "Harbor Wall Lantern",
-    collection: "outdoor",
-    type: "Wall lantern",
-    price: 245,
-    finishes: ["Matte black", "Graphite"],
-    image: product3,
-    description:
-      "An IP44-rated lantern in powder-coated aluminium with clear tempered glass. Cast a warm pool of light beside a door or along a garden wall.",
-    specs: [
-      { label: "Height", value: "420 mm" },
-      { label: "Rating", value: "IP44, marine-grade" },
-      { label: "Bulb", value: "1 × E27, max 40W" },
-      { label: "Material", value: "Aluminium, tempered glass" },
-    ],
-  },
-  {
-    slug: "nimbus-ceiling",
-    name: "Nimbus Ceiling Lamp",
-    collection: "kids",
-    type: "Ceiling lamp",
-    price: 178,
-    finishes: ["Cloud white", "Soft blush"],
-    image: product4,
-    description:
-      "A soft cloud-shaped flush mount with a dimmable LED panel tuned to a warm 2700K glow. Quiet, calm, child-safe.",
-    specs: [
-      { label: "Diameter", value: "440 mm" },
-      { label: "Source", value: "Integrated LED, 18W, 2700K" },
-      { label: "Dimming", value: "Phase-cut compatible" },
-      { label: "Material", value: "Acrylic shade, steel base" },
-    ],
-  },
-  {
-    slug: "arpa-floor-lamp",
-    name: "Arpa Floor Lamp",
-    collection: "modern",
-    type: "Floor lamp",
-    price: 395,
-    finishes: ["Matte black", "Ivory"],
-    image: product5,
-    description:
-      "An adjustable reading lamp with a tilting linen drum and weighted iron base. Pulls forward over a chair, retracts against a wall.",
-    specs: [
-      { label: "Height", value: "1520 mm" },
-      { label: "Base", value: "Ø 260 mm cast iron" },
-      { label: "Bulb", value: "1 × E27, max 60W" },
-      { label: "Switch", value: "Foot-operated" },
-    ],
-  },
-  {
-    slug: "amber-table-lamp",
-    name: "Amber Table Lamp",
-    collection: "classic",
-    type: "Table lamp",
-    price: 215,
-    finishes: ["Amber glass / brass"],
-    image: product6,
-    description:
-      "Ribbed amber glass cup on a turned brass stem. A small, warm light for a hallway console or a bedside table.",
-    specs: [
-      { label: "Height", value: "340 mm" },
-      { label: "Bulb", value: "1 × E14, max 25W" },
-      { label: "Cable", value: "2 m braided, in-line dimmer" },
-      { label: "Material", value: "Hand-blown glass, brass" },
-    ],
-  },
-];
-
-export const getCollection = (slug: string) =>
-  collections.find((c) => c.slug === slug);
-
-export const getProductsByCollection = (slug: string) =>
-  products.filter((p) => p.collection === slug);
-
-export const getProduct = (slug: string) =>
-  products.find((p) => p.slug === slug);
+export const allProducts: Product[] = collections.flatMap(c => c.products);
+export function getCollection(slug: string) { return collections.find(c => c.slug === slug); }
+export function getProduct(slug: string) { return allProducts.find(p => p.slug === slug); }
