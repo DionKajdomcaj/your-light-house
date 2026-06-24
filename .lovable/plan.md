@@ -1,33 +1,19 @@
+# Why every page 404s
 
-I can't clone ideal-lux.com pixel-for-pixel (their layout, copy, and imagery are their IP), but I can build a polished lighting-brand site for **LightHouse** that captures the same feel: editorial hero, product collections, inspiration gallery, designer/brand story, and a clean e-commerce-style catalog.
+`src/routeTree.gen.ts` is stale/corrupt. It was hand-edited in an earlier turn and never regenerated properly. Evidence from the current file:
 
-## Pages
-- `/` Home — full-bleed hero, featured collections, new arrivals strip, inspiration mosaic, brand story teaser, newsletter
-- `/collections` — grid of collection cards (Modern, Classic, Outdoor, Kids, Smart)
-- `/collections/$slug` — collection landing with filterable product grid
-- `/products/$slug` — product detail (gallery, specs, finishes, related)
-- `/inspiration` — lifestyle/project gallery
-- `/about` — brand story for LightHouse
-- `/contact` — contact form + showroom info
+- `collections.$slug.tsx` (declares `/collections/$slug`) is registered as `/$slug` — so `/collections/anything` falls through to root-level `$slug`.
+- `company.history.tsx`, `company.contacts.tsx`, `company.warehouse.tsx`, `company.company-profile.tsx` are registered at `/history`, `/contacts`, `/warehouse`, `/company-profile` instead of nested under `/company/*`.
+- Duplicate `id: '/'` entries appear in the tree.
+- `/products/` exists but nothing maps `/products` → that index cleanly without a `products.tsx` layout.
 
-## Visual direction
-- Warm minimal editorial: off-white background, deep charcoal text, brass/amber accent
-- Large serif display headings + clean sans body
-- Generous whitespace, full-bleed photography, subtle hover zoom on product cards
-- Sticky transparent nav that solidifies on scroll, mega-menu for collections
-- Mobile-first responsive
+Result: most nav clicks land on TanStack's notFound boundary.
 
-## Technical
-- TanStack Start route files per page above
-- Semantic tokens in `src/styles.css` (background, foreground, accent, muted)
-- Shadcn components: button, card, sheet (mobile nav), navigation-menu, input, dialog
-- All imagery via `imagegen` (interior shots, product renders, lifestyle) — no scraped assets
-- Per-route SEO (`head()` with title/description/og)
-- Static placeholder product/collection data in a local module; no backend yet
+## Fix
 
-## Out of scope (ask if you want them)
-- Real e-commerce (cart, checkout, payments)
-- CMS / admin
-- Multi-language
+1. Delete `src/routeTree.gen.ts` and let the TanStack Router Vite plugin regenerate it from the existing files in `src/routes/`. Restart the dev server so the plugin re-scans.
+2. Add a tiny `src/routes/products.tsx` layout (just `<Outlet />`) so `products.index.tsx` (`/products/`) and the children (`products.indoor`, `products.outdoor`, `products.technical`, `products.$slug`) nest correctly under a real `/products` parent and `/products` resolves cleanly.
+3. Verify by reading the regenerated `routeTree.gen.ts` — every route ID should match its `createFileRoute(...)` string (e.g. `/collections/$slug`, `/company/history`, `/products/indoor`).
+4. Spot-check in the running preview: `/collections/ceiling`, `/company/history`, `/products`, `/products/indoor`, `/new-releases`.
 
-Confirm and I'll build it, or tell me which sections to drop/add.
+No component code changes needed beyond the new `products.tsx` layout. Header `Link` targets already match the intended URLs.
