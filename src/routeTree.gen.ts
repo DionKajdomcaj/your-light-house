@@ -9,17 +9,61 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SearchRouteImport } from './routes/search'
+import { Route as ReservedAreaRouteImport } from './routes/reserved-area'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as NewReleasesRouteImport } from './routes/new-releases'
 import { Route as InspirationRouteImport } from './routes/inspiration'
+import { Route as FlagshipStoreRouteImport } from './routes/flagship-store'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CompanyRouteImport } from './routes/company'
 import { Route as CollectionsRouteImport } from './routes/collections'
+import { Route as CatalogsRouteImport } from './routes/catalogs'
+import { Route as BulbsRouteImport } from './routes/bulbs'
+import { Route as AuthorizedDealersRouteImport } from './routes/authorized-dealers'
+import { Route as AccessoriesRouteImport } from './routes/accessories'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProductsIndexRouteImport } from './routes/products.index'
+import { Route as CompanyIndexRouteImport } from './routes/company.index'
+import { Route as ProductsTechnicalRouteImport } from './routes/products.technical'
+import { Route as ProductsOutdoorRouteImport } from './routes/products.outdoor'
+import { Route as ProductsIndoorRouteImport } from './routes/products.indoor'
 import { Route as ProductsSlugRouteImport } from './routes/products.$slug'
+import { Route as CompanyWarehouseRouteImport } from './routes/company.warehouse'
+import { Route as CompanyHistoryRouteImport } from './routes/company.history'
+import { Route as CompanyContactsRouteImport } from './routes/company.contacts'
+import { Route as CompanyCompanyProfileRouteImport } from './routes/company.company-profile'
 import { Route as CollectionsSlugRouteImport } from './routes/collections.$slug'
 
+const SearchRoute = SearchRouteImport.update({
+  id: '/search',
+  path: '/search',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReservedAreaRoute = ReservedAreaRouteImport.update({
+  id: '/reserved-area',
+  path: '/reserved-area',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NewReleasesRoute = NewReleasesRouteImport.update({
+  id: '/new-releases',
+  path: '/new-releases',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const InspirationRoute = InspirationRouteImport.update({
   id: '/inspiration',
   path: '/inspiration',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FlagshipStoreRoute = FlagshipStoreRouteImport.update({
+  id: '/flagship-store',
+  path: '/flagship-store',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -27,9 +71,34 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CompanyRoute = CompanyRouteImport.update({
+  id: '/company',
+  path: '/company',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CollectionsRoute = CollectionsRouteImport.update({
   id: '/collections',
   path: '/collections',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CatalogsRoute = CatalogsRouteImport.update({
+  id: '/catalogs',
+  path: '/catalogs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BulbsRoute = BulbsRouteImport.update({
+  id: '/bulbs',
+  path: '/bulbs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthorizedDealersRoute = AuthorizedDealersRouteImport.update({
+  id: '/authorized-dealers',
+  path: '/authorized-dealers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AccessoriesRoute = AccessoriesRouteImport.update({
+  id: '/accessories',
+  path: '/accessories',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -42,10 +111,55 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProductsIndexRoute = ProductsIndexRouteImport.update({
+  id: '/products/',
+  path: '/products/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompanyIndexRoute = CompanyIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => CompanyRoute,
+} as any)
+const ProductsTechnicalRoute = ProductsTechnicalRouteImport.update({
+  id: '/products/technical',
+  path: '/products/technical',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsOutdoorRoute = ProductsOutdoorRouteImport.update({
+  id: '/products/outdoor',
+  path: '/products/outdoor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsIndoorRoute = ProductsIndoorRouteImport.update({
+  id: '/products/indoor',
+  path: '/products/indoor',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProductsSlugRoute = ProductsSlugRouteImport.update({
   id: '/products/$slug',
   path: '/products/$slug',
   getParentRoute: () => rootRouteImport,
+} as any)
+const CompanyWarehouseRoute = CompanyWarehouseRouteImport.update({
+  id: '/warehouse',
+  path: '/warehouse',
+  getParentRoute: () => CompanyRoute,
+} as any)
+const CompanyHistoryRoute = CompanyHistoryRouteImport.update({
+  id: '/history',
+  path: '/history',
+  getParentRoute: () => CompanyRoute,
+} as any)
+const CompanyContactsRoute = CompanyContactsRouteImport.update({
+  id: '/contacts',
+  path: '/contacts',
+  getParentRoute: () => CompanyRoute,
+} as any)
+const CompanyCompanyProfileRoute = CompanyCompanyProfileRouteImport.update({
+  id: '/company-profile',
+  path: '/company-profile',
+  getParentRoute: () => CompanyRoute,
 } as any)
 const CollectionsSlugRoute = CollectionsSlugRouteImport.update({
   id: '/$slug',
@@ -56,77 +170,238 @@ const CollectionsSlugRoute = CollectionsSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/accessories': typeof AccessoriesRoute
+  '/authorized-dealers': typeof AuthorizedDealersRoute
+  '/bulbs': typeof BulbsRoute
+  '/catalogs': typeof CatalogsRoute
   '/collections': typeof CollectionsRouteWithChildren
+  '/company': typeof CompanyRouteWithChildren
   '/contact': typeof ContactRoute
+  '/flagship-store': typeof FlagshipStoreRoute
   '/inspiration': typeof InspirationRoute
+  '/new-releases': typeof NewReleasesRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/reserved-area': typeof ReservedAreaRoute
+  '/search': typeof SearchRoute
   '/collections/$slug': typeof CollectionsSlugRoute
+  '/company/company-profile': typeof CompanyCompanyProfileRoute
+  '/company/contacts': typeof CompanyContactsRoute
+  '/company/history': typeof CompanyHistoryRoute
+  '/company/warehouse': typeof CompanyWarehouseRoute
   '/products/$slug': typeof ProductsSlugRoute
+  '/products/indoor': typeof ProductsIndoorRoute
+  '/products/outdoor': typeof ProductsOutdoorRoute
+  '/products/technical': typeof ProductsTechnicalRoute
+  '/company/': typeof CompanyIndexRoute
+  '/products/': typeof ProductsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/accessories': typeof AccessoriesRoute
+  '/authorized-dealers': typeof AuthorizedDealersRoute
+  '/bulbs': typeof BulbsRoute
+  '/catalogs': typeof CatalogsRoute
   '/collections': typeof CollectionsRouteWithChildren
   '/contact': typeof ContactRoute
+  '/flagship-store': typeof FlagshipStoreRoute
   '/inspiration': typeof InspirationRoute
+  '/new-releases': typeof NewReleasesRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/reserved-area': typeof ReservedAreaRoute
+  '/search': typeof SearchRoute
   '/collections/$slug': typeof CollectionsSlugRoute
+  '/company/company-profile': typeof CompanyCompanyProfileRoute
+  '/company/contacts': typeof CompanyContactsRoute
+  '/company/history': typeof CompanyHistoryRoute
+  '/company/warehouse': typeof CompanyWarehouseRoute
   '/products/$slug': typeof ProductsSlugRoute
+  '/products/indoor': typeof ProductsIndoorRoute
+  '/products/outdoor': typeof ProductsOutdoorRoute
+  '/products/technical': typeof ProductsTechnicalRoute
+  '/company': typeof CompanyIndexRoute
+  '/products': typeof ProductsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/accessories': typeof AccessoriesRoute
+  '/authorized-dealers': typeof AuthorizedDealersRoute
+  '/bulbs': typeof BulbsRoute
+  '/catalogs': typeof CatalogsRoute
   '/collections': typeof CollectionsRouteWithChildren
+  '/company': typeof CompanyRouteWithChildren
   '/contact': typeof ContactRoute
+  '/flagship-store': typeof FlagshipStoreRoute
   '/inspiration': typeof InspirationRoute
+  '/new-releases': typeof NewReleasesRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/reserved-area': typeof ReservedAreaRoute
+  '/search': typeof SearchRoute
   '/collections/$slug': typeof CollectionsSlugRoute
+  '/company/company-profile': typeof CompanyCompanyProfileRoute
+  '/company/contacts': typeof CompanyContactsRoute
+  '/company/history': typeof CompanyHistoryRoute
+  '/company/warehouse': typeof CompanyWarehouseRoute
   '/products/$slug': typeof ProductsSlugRoute
+  '/products/indoor': typeof ProductsIndoorRoute
+  '/products/outdoor': typeof ProductsOutdoorRoute
+  '/products/technical': typeof ProductsTechnicalRoute
+  '/company/': typeof CompanyIndexRoute
+  '/products/': typeof ProductsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/about'
+    | '/accessories'
+    | '/authorized-dealers'
+    | '/bulbs'
+    | '/catalogs'
     | '/collections'
+    | '/company'
     | '/contact'
+    | '/flagship-store'
     | '/inspiration'
+    | '/new-releases'
+    | '/privacy-policy'
+    | '/reserved-area'
+    | '/search'
     | '/collections/$slug'
+    | '/company/company-profile'
+    | '/company/contacts'
+    | '/company/history'
+    | '/company/warehouse'
     | '/products/$slug'
+    | '/products/indoor'
+    | '/products/outdoor'
+    | '/products/technical'
+    | '/company/'
+    | '/products/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
+    | '/accessories'
+    | '/authorized-dealers'
+    | '/bulbs'
+    | '/catalogs'
     | '/collections'
     | '/contact'
+    | '/flagship-store'
     | '/inspiration'
+    | '/new-releases'
+    | '/privacy-policy'
+    | '/reserved-area'
+    | '/search'
     | '/collections/$slug'
+    | '/company/company-profile'
+    | '/company/contacts'
+    | '/company/history'
+    | '/company/warehouse'
     | '/products/$slug'
+    | '/products/indoor'
+    | '/products/outdoor'
+    | '/products/technical'
+    | '/company'
+    | '/products'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/accessories'
+    | '/authorized-dealers'
+    | '/bulbs'
+    | '/catalogs'
     | '/collections'
+    | '/company'
     | '/contact'
+    | '/flagship-store'
     | '/inspiration'
+    | '/new-releases'
+    | '/privacy-policy'
+    | '/reserved-area'
+    | '/search'
     | '/collections/$slug'
+    | '/company/company-profile'
+    | '/company/contacts'
+    | '/company/history'
+    | '/company/warehouse'
     | '/products/$slug'
+    | '/products/indoor'
+    | '/products/outdoor'
+    | '/products/technical'
+    | '/company/'
+    | '/products/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AccessoriesRoute: typeof AccessoriesRoute
+  AuthorizedDealersRoute: typeof AuthorizedDealersRoute
+  BulbsRoute: typeof BulbsRoute
+  CatalogsRoute: typeof CatalogsRoute
   CollectionsRoute: typeof CollectionsRouteWithChildren
+  CompanyRoute: typeof CompanyRouteWithChildren
   ContactRoute: typeof ContactRoute
+  FlagshipStoreRoute: typeof FlagshipStoreRoute
   InspirationRoute: typeof InspirationRoute
+  NewReleasesRoute: typeof NewReleasesRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  ReservedAreaRoute: typeof ReservedAreaRoute
+  SearchRoute: typeof SearchRoute
   ProductsSlugRoute: typeof ProductsSlugRoute
+  ProductsIndoorRoute: typeof ProductsIndoorRoute
+  ProductsOutdoorRoute: typeof ProductsOutdoorRoute
+  ProductsTechnicalRoute: typeof ProductsTechnicalRoute
+  ProductsIndexRoute: typeof ProductsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/search': {
+      id: '/search'
+      path: '/search'
+      fullPath: '/search'
+      preLoaderRoute: typeof SearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reserved-area': {
+      id: '/reserved-area'
+      path: '/reserved-area'
+      fullPath: '/reserved-area'
+      preLoaderRoute: typeof ReservedAreaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/new-releases': {
+      id: '/new-releases'
+      path: '/new-releases'
+      fullPath: '/new-releases'
+      preLoaderRoute: typeof NewReleasesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/inspiration': {
       id: '/inspiration'
       path: '/inspiration'
       fullPath: '/inspiration'
       preLoaderRoute: typeof InspirationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/flagship-store': {
+      id: '/flagship-store'
+      path: '/flagship-store'
+      fullPath: '/flagship-store'
+      preLoaderRoute: typeof FlagshipStoreRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -136,11 +411,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/company': {
+      id: '/company'
+      path: '/company'
+      fullPath: '/company'
+      preLoaderRoute: typeof CompanyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/collections': {
       id: '/collections'
       path: '/collections'
       fullPath: '/collections'
       preLoaderRoute: typeof CollectionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/catalogs': {
+      id: '/catalogs'
+      path: '/catalogs'
+      fullPath: '/catalogs'
+      preLoaderRoute: typeof CatalogsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bulbs': {
+      id: '/bulbs'
+      path: '/bulbs'
+      fullPath: '/bulbs'
+      preLoaderRoute: typeof BulbsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/authorized-dealers': {
+      id: '/authorized-dealers'
+      path: '/authorized-dealers'
+      fullPath: '/authorized-dealers'
+      preLoaderRoute: typeof AuthorizedDealersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/accessories': {
+      id: '/accessories'
+      path: '/accessories'
+      fullPath: '/accessories'
+      preLoaderRoute: typeof AccessoriesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -157,12 +467,75 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/products/': {
+      id: '/products/'
+      path: '/products'
+      fullPath: '/products/'
+      preLoaderRoute: typeof ProductsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/company/': {
+      id: '/company/'
+      path: '/'
+      fullPath: '/company/'
+      preLoaderRoute: typeof CompanyIndexRouteImport
+      parentRoute: typeof CompanyRoute
+    }
+    '/products/technical': {
+      id: '/products/technical'
+      path: '/products/technical'
+      fullPath: '/products/technical'
+      preLoaderRoute: typeof ProductsTechnicalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/outdoor': {
+      id: '/products/outdoor'
+      path: '/products/outdoor'
+      fullPath: '/products/outdoor'
+      preLoaderRoute: typeof ProductsOutdoorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/indoor': {
+      id: '/products/indoor'
+      path: '/products/indoor'
+      fullPath: '/products/indoor'
+      preLoaderRoute: typeof ProductsIndoorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/products/$slug': {
       id: '/products/$slug'
       path: '/products/$slug'
       fullPath: '/products/$slug'
       preLoaderRoute: typeof ProductsSlugRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/company/warehouse': {
+      id: '/company/warehouse'
+      path: '/warehouse'
+      fullPath: '/company/warehouse'
+      preLoaderRoute: typeof CompanyWarehouseRouteImport
+      parentRoute: typeof CompanyRoute
+    }
+    '/company/history': {
+      id: '/company/history'
+      path: '/history'
+      fullPath: '/company/history'
+      preLoaderRoute: typeof CompanyHistoryRouteImport
+      parentRoute: typeof CompanyRoute
+    }
+    '/company/contacts': {
+      id: '/company/contacts'
+      path: '/contacts'
+      fullPath: '/company/contacts'
+      preLoaderRoute: typeof CompanyContactsRouteImport
+      parentRoute: typeof CompanyRoute
+    }
+    '/company/company-profile': {
+      id: '/company/company-profile'
+      path: '/company-profile'
+      fullPath: '/company/company-profile'
+      preLoaderRoute: typeof CompanyCompanyProfileRouteImport
+      parentRoute: typeof CompanyRoute
     }
     '/collections/$slug': {
       id: '/collections/$slug'
@@ -186,13 +559,46 @@ const CollectionsRouteWithChildren = CollectionsRoute._addFileChildren(
   CollectionsRouteChildren,
 )
 
+interface CompanyRouteChildren {
+  CompanyCompanyProfileRoute: typeof CompanyCompanyProfileRoute
+  CompanyContactsRoute: typeof CompanyContactsRoute
+  CompanyHistoryRoute: typeof CompanyHistoryRoute
+  CompanyWarehouseRoute: typeof CompanyWarehouseRoute
+  CompanyIndexRoute: typeof CompanyIndexRoute
+}
+
+const CompanyRouteChildren: CompanyRouteChildren = {
+  CompanyCompanyProfileRoute: CompanyCompanyProfileRoute,
+  CompanyContactsRoute: CompanyContactsRoute,
+  CompanyHistoryRoute: CompanyHistoryRoute,
+  CompanyWarehouseRoute: CompanyWarehouseRoute,
+  CompanyIndexRoute: CompanyIndexRoute,
+}
+
+const CompanyRouteWithChildren =
+  CompanyRoute._addFileChildren(CompanyRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AccessoriesRoute: AccessoriesRoute,
+  AuthorizedDealersRoute: AuthorizedDealersRoute,
+  BulbsRoute: BulbsRoute,
+  CatalogsRoute: CatalogsRoute,
   CollectionsRoute: CollectionsRouteWithChildren,
+  CompanyRoute: CompanyRouteWithChildren,
   ContactRoute: ContactRoute,
+  FlagshipStoreRoute: FlagshipStoreRoute,
   InspirationRoute: InspirationRoute,
+  NewReleasesRoute: NewReleasesRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  ReservedAreaRoute: ReservedAreaRoute,
+  SearchRoute: SearchRoute,
   ProductsSlugRoute: ProductsSlugRoute,
+  ProductsIndoorRoute: ProductsIndoorRoute,
+  ProductsOutdoorRoute: ProductsOutdoorRoute,
+  ProductsTechnicalRoute: ProductsTechnicalRoute,
+  ProductsIndexRoute: ProductsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
