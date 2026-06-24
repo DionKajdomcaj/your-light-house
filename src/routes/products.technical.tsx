@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site/SiteShell";
 import { ProductGrid, SubcategoryNav } from "@/components/site/ProductGrid";
-import { products, COLLECTION_GROUPS } from "@/lib/catalog";
-import insp3 from "@/assets/inspiration-3.jpg";
+import { getProductsByTopLevel, getCollectionsByTopLevel } from "@/lib/catalog";
+import hero from "@/assets/cat-technical.jpg";
 
 export const Route = createFileRoute("/products/technical")({
   head: () => ({
@@ -18,11 +18,12 @@ export const Route = createFileRoute("/products/technical")({
 });
 
 function TechPage() {
-  const items = products.filter((p) => (COLLECTION_GROUPS.technical as readonly string[]).includes(p.collection));
+  const items = getProductsByTopLevel("technical");
+  const subs = getCollectionsByTopLevel("technical");
   return (
     <SiteShell overImage>
       <section className="relative h-[70vh] min-h-[480px] w-full overflow-hidden">
-        <img src={insp3} alt="" className="absolute inset-0 h-full w-full object-cover" />
+        <img src={hero} alt="" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-black/25" />
         <div className="container-x relative z-10 flex h-full flex-col justify-end pb-12 text-[color:var(--on-image)]">
           <div className="eyebrow !text-white/80">Catalog</div>
@@ -33,12 +34,7 @@ function TechPage() {
       </section>
 
       <SubcategoryNav
-        items={[
-          { slug: "tracklights", label: "Tracklights", href: "/collections/tracklights" },
-          { slug: "recessed-spotlight", label: "Recessed", href: "/collections/recessed-spotlight" },
-          { slug: "linear-system", label: "Linear systems", href: "/collections/linear-system" },
-          { slug: "projector", label: "Projectors", href: "/collections/projector" },
-        ]}
+        items={subs.map((c) => ({ slug: c.slug, label: c.name, href: `/collections/${c.slug}` }))}
       />
 
       <section className="container-x py-16">
