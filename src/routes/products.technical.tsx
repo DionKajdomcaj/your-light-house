@@ -34,9 +34,10 @@ function TechPage() {
 
       <SubcategoryNav
         items={[
-          { slug: "track", label: "Tracks", href: "/products/technical" },
-          { slug: "recessed", label: "Recessed", href: "/products/technical" },
-          { slug: "systems", label: "Systems", href: "/products/technical" },
+          { slug: "tracklights", label: "Tracklights", href: "/collections/tracklights" },
+          { slug: "recessed-spotlight", label: "Recessed", href: "/collections/recessed-spotlight" },
+          { slug: "linear-system", label: "Linear systems", href: "/collections/linear-system" },
+          { slug: "projector", label: "Projectors", href: "/collections/projector" },
         ]}
       />
 
