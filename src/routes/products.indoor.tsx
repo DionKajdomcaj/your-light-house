@@ -38,7 +38,7 @@ function IndoorPage() {
       <SubcategoryNav
         active="indoor"
         items={[
-          { slug: "pendant", label: "Suspensions", href: "/collections/$slug".replace("$slug", "pendant") },
+          { slug: "suspension", label: "Suspensions", href: "/collections/$slug".replace("$slug", "suspension") },
           { slug: "ceiling", label: "Ceiling lamps", href: "/collections/$slug".replace("$slug", "ceiling") },
           { slug: "wall", label: "Wall lamps", href: "/collections/$slug".replace("$slug", "wall") },
           { slug: "floor", label: "Floor lamps", href: "/collections/$slug".replace("$slug", "floor") },
