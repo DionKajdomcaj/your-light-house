@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site/SiteShell";
 import { ProductGrid, SubcategoryNav } from "@/components/site/ProductGrid";
-import { products } from "@/lib/catalog";
+import { products, COLLECTION_GROUPS } from "@/lib/catalog";
 import insp1 from "@/assets/inspiration-1.jpg";
 
-const INDOOR = ["pendant", "ceiling", "wall", "floor", "table"];
+const INDOOR: readonly string[] = COLLECTION_GROUPS.indoor;
 
 export const Route = createFileRoute("/products/indoor")({
   head: () => ({
@@ -38,7 +38,7 @@ function IndoorPage() {
       <SubcategoryNav
         active="indoor"
         items={[
-          { slug: "pendant", label: "Suspensions", href: "/collections/$slug".replace("$slug", "pendant") },
+          { slug: "suspension", label: "Suspensions", href: "/collections/$slug".replace("$slug", "suspension") },
           { slug: "ceiling", label: "Ceiling lamps", href: "/collections/$slug".replace("$slug", "ceiling") },
           { slug: "wall", label: "Wall lamps", href: "/collections/$slug".replace("$slug", "wall") },
           { slug: "floor", label: "Floor lamps", href: "/collections/$slug".replace("$slug", "floor") },

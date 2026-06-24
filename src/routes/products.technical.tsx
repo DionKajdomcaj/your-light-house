@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site/SiteShell";
 import { ProductGrid, SubcategoryNav } from "@/components/site/ProductGrid";
-import { products } from "@/lib/catalog";
+import { products, COLLECTION_GROUPS } from "@/lib/catalog";
 import insp3 from "@/assets/inspiration-3.jpg";
 
 export const Route = createFileRoute("/products/technical")({
@@ -18,7 +18,7 @@ export const Route = createFileRoute("/products/technical")({
 });
 
 function TechPage() {
-  const items = products.filter((p) => p.collection === "track");
+  const items = products.filter((p) => (COLLECTION_GROUPS.technical as readonly string[]).includes(p.collection));
   return (
     <SiteShell overImage>
       <section className="relative h-[70vh] min-h-[480px] w-full overflow-hidden">
@@ -34,9 +34,10 @@ function TechPage() {
 
       <SubcategoryNav
         items={[
-          { slug: "track", label: "Tracks", href: "/products/technical" },
-          { slug: "recessed", label: "Recessed", href: "/products/technical" },
-          { slug: "systems", label: "Systems", href: "/products/technical" },
+          { slug: "tracklights", label: "Tracklights", href: "/collections/tracklights" },
+          { slug: "recessed-spotlight", label: "Recessed", href: "/collections/recessed-spotlight" },
+          { slug: "linear-system", label: "Linear systems", href: "/collections/linear-system" },
+          { slug: "projector", label: "Projectors", href: "/collections/projector" },
         ]}
       />
 
