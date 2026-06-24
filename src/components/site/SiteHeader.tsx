@@ -1,14 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, Search, Globe, X, ArrowLeft } from "lucide-react";
+import { Menu, Search, X, ArrowLeft } from "lucide-react";
 
 const nav = [
   { to: "/company/history", label: "Company" },
   { to: "/products", label: "Products" },
-  { to: "/new-releases", label: "New releases" },
-  { to: "/authorized-dealers", label: "Where to buy" },
-  { to: "/catalogs", label: "Downloads" },
-  { to: "/reserved-area", label: "Reserved area" },
 ] as const;
 
 export function SiteHeader({ overImage = false }: { overImage?: boolean }) {
@@ -60,12 +56,6 @@ export function SiteHeader({ overImage = false }: { overImage?: boolean }) {
           >
             <Search className="h-4 w-4" strokeWidth={1.5} />
           </Link>
-          <button
-            aria-label="Language"
-            className="hidden h-9 w-9 items-center justify-center transition-opacity hover:opacity-60 lg:inline-flex"
-          >
-            <Globe className="h-4 w-4" strokeWidth={1.5} />
-          </button>
           <button
             aria-label="Menu"
             onClick={() => setOpen(true)}
