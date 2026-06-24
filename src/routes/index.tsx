@@ -23,9 +23,9 @@ export const Route = createFileRoute("/")({
 function Home() {
   const featured = products.slice(0, 8);
   const trios = [
-    { to: "/collections", label: "Indoor", image: insp1 },
-    { to: "/collections", label: "Outdoor", image: insp2 },
-    { to: "/collections", label: "Technical", image: insp3 },
+    { to: "/products/indoor", label: "Indoor", image: catIndoor },
+    { to: "/products/outdoor", label: "Outdoor", image: catOutdoor },
+    { to: "/products/technical", label: "Technical", image: catTechnical },
   ];
 
   return (
