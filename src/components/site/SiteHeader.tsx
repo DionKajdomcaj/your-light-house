@@ -1,14 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, Search, Globe, X, ArrowLeft } from "lucide-react";
+import { Menu, Search, X, ArrowLeft } from "lucide-react";
 
 const nav = [
   { to: "/company/history", label: "Company" },
   { to: "/products", label: "Products" },
-  { to: "/new-releases", label: "New releases" },
-  { to: "/authorized-dealers", label: "Where to buy" },
-  { to: "/catalogs", label: "Downloads" },
-  { to: "/reserved-area", label: "Reserved area" },
 ] as const;
 
 export function SiteHeader({ overImage = false }: { overImage?: boolean }) {
