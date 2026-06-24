@@ -61,11 +61,6 @@ export function SiteHeader({ overImage = false }: { overImage?: boolean }) {
             onClick={() => setOpen(true)}
             className="inline-flex h-9 w-9 items-center justify-center transition-opacity hover:opacity-60"
           >
-          <button
-            aria-label="Menu"
-            onClick={() => setOpen(true)}
-            className="inline-flex h-9 w-9 items-center justify-center transition-opacity hover:opacity-60"
-          >
             <Menu className="h-5 w-5" strokeWidth={1.5} />
           </button>
         </div>
