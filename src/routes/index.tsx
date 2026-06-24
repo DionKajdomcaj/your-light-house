@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site/SiteShell";
 import { collections, products } from "@/lib/catalog";
-import insp1 from "@/assets/inspiration-1.jpg";
-import insp2 from "@/assets/inspiration-2.jpg";
-import insp3 from "@/assets/inspiration-3.jpg";
+import catIndoor from "@/assets/cat-indoor.jpg";
+import catOutdoor from "@/assets/cat-outdoor.jpg";
+import catTechnical from "@/assets/cat-technical.jpg";
 import heroImg from "@/assets/hero.jpg";
 import storyImg from "@/assets/story.jpg";
 
