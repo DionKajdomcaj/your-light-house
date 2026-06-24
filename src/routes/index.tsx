@@ -91,7 +91,7 @@ function Home() {
       {/* PRODUCT GRID */}
       <section className="container-x pb-24 md:pb-32">
         <div className="mb-12 flex items-end justify-between">
-          <h2 className="h-section text-2xl md:text-3xl">New this season</h2>
+          <h2 className="h-section text-2xl md:text-3xl">Explore our collections</h2>
           <Link to="/collections" className="hidden md:inline-flex items-center gap-2 text-sm hover:opacity-60">
             All collections <span aria-hidden>→</span>
           </Link>
