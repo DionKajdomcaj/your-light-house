@@ -74,7 +74,7 @@ function CollectionDetail() {
           </p>
         ) : (
           <div className="grid gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
-            {products.map((p) => (
+            {products.map((p: (typeof products)[number]) => (
               <Link
                 key={p.slug}
                 to="/products/$slug"

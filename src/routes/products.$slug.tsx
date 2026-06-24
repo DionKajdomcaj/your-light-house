@@ -85,7 +85,7 @@ function ProductDetail() {
           <div className="mt-10">
             <div className="eyebrow text-muted-foreground">Finish</div>
             <div className="mt-3 flex flex-wrap gap-2">
-              {product.finishes.map((f) => (
+              {product.finishes.map((f: string) => (
                 <button
                   key={f}
                   type="button"
@@ -107,7 +107,7 @@ function ProductDetail() {
           </div>
 
           <dl className="mt-12 divide-y divide-border border-y border-border">
-            {product.specs.map((s) => (
+            {product.specs.map((s: { label: string; value: string }) => (
               <div key={s.label} className="flex justify-between gap-6 py-4 text-sm">
                 <dt className="text-muted-foreground">{s.label}</dt>
                 <dd className="text-right">{s.value}</dd>
@@ -122,7 +122,7 @@ function ProductDetail() {
           <div className="container-x">
             <h2 className="mb-10 text-3xl">From the same collection</h2>
             <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-              {related.map((p) => (
+              {related.map((p: (typeof related)[number]) => (
                 <Link
                   key={p.slug}
                   to="/products/$slug"
