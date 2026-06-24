@@ -9,15 +9,15 @@ export const Route = createFileRoute("/products/$slug")({
     const collection = getCollection(product.collection);
     const related = allProducts
       .filter((p) => p.collection === product.collection && p.slug !== product.slug)
-      .slice(0, 3);
+      .slice(0, 4);
     return { product, collection, related };
   },
   head: ({ loaderData }) => ({
     meta: loaderData
       ? [
-          { title: `${loaderData.product.name} — LightHouse` },
+          { title: `${loaderData.product.name} — Lighthouse` },
           { name: "description", content: loaderData.product.description },
-          { property: "og:title", content: `${loaderData.product.name} — LightHouse` },
+          { property: "og:title", content: `${loaderData.product.name} — Lighthouse` },
           { property: "og:description", content: loaderData.product.description },
           { property: "og:image", content: loaderData.product.image },
           { property: "og:type", content: "product" },
@@ -31,9 +31,9 @@ export const Route = createFileRoute("/products/$slug")({
   notFoundComponent: () => (
     <SiteShell>
       <div className="container-x py-40 text-center">
-        <h1 className="text-4xl">Product not found</h1>
-        <Link to="/collections" className="mt-6 inline-block underline">
-          Browse collections
+        <h1 className="h-section text-3xl">Product not found</h1>
+        <Link to="/collections" className="cta-link mt-6 border-b border-black/80">
+          Browse collections <span aria-hidden>→</span>
         </Link>
       </div>
     </SiteShell>
@@ -46,16 +46,16 @@ function ProductDetail() {
 
   return (
     <SiteShell>
-      <section className="container-x pt-28 pb-12 lg:pt-36">
-        <nav className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-          <Link to="/collections" className="hover:text-foreground">Collections</Link>
+      <section className="container-x pt-32 pb-8 lg:pt-40">
+        <nav className="text-xs uppercase tracking-[0.18em] text-[color:var(--ink-muted)]">
+          <Link to="/collections" className="hover:text-[color:var(--ink)]">Collections</Link>
           {collection ? (
             <>
               <span className="mx-2">/</span>
               <Link
                 to="/collections/$slug"
                 params={{ slug: collection.slug }}
-                className="hover:text-foreground"
+                className="hover:text-[color:var(--ink)]"
               >
                 {collection.name}
               </Link>
@@ -66,30 +66,32 @@ function ProductDetail() {
 
       <section className="container-x grid gap-12 pb-24 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-7">
-          <div className="aspect-[4/5] overflow-hidden bg-secondary">
+          <div className="aspect-square overflow-hidden bg-[color:var(--surface)]">
             <img
               src={product.image}
               alt={product.name}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-contain p-10 mix-blend-multiply"
             />
           </div>
         </div>
 
         <div className="lg:col-span-5 lg:sticky lg:top-28 lg:self-start">
-          <div className="eyebrow text-muted-foreground">{product.type}</div>
-          <h1 className="mt-3 text-4xl md:text-5xl">{product.name}</h1>
-          <div className="mt-4 text-xl tabular-nums">€ {product.price.toLocaleString()}</div>
+          <div className="t-code">cod. {product.id.slice(-6)}</div>
+          <h1 className="h-section mt-3 text-3xl md:text-4xl">{product.name}</h1>
+          <div className="mt-4 text-base text-[color:var(--ink-muted)]">{product.type}</div>
 
-          <p className="mt-8 text-muted-foreground">{product.description}</p>
+          <p className="mt-8 text-[color:var(--ink-muted)] leading-relaxed">
+            {product.description}
+          </p>
 
           <div className="mt-10">
-            <div className="eyebrow text-muted-foreground">Finish</div>
+            <div className="eyebrow">Finish</div>
             <div className="mt-3 flex flex-wrap gap-2">
               {product.finishes.map((f: string) => (
                 <button
                   key={f}
                   type="button"
-                  className="border border-border px-4 py-2 text-sm hover:border-foreground"
+                  className="border border-[color:var(--ink)] px-4 py-2 text-xs uppercase tracking-[0.08em] hover:bg-[color:var(--ink)] hover:text-white transition-colors"
                 >
                   {f}
                 </button>
@@ -98,18 +100,24 @@ function ProductDetail() {
           </div>
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <button className="flex-1 bg-foreground px-6 py-4 text-sm tracking-wide text-background hover:bg-foreground/90">
-              Add to enquiry
-            </button>
-            <button className="flex-1 border border-foreground px-6 py-4 text-sm tracking-wide hover:bg-foreground hover:text-background">
-              Request a sample
-            </button>
+            <Link
+              to="/contact"
+              className="flex-1 bg-[color:var(--ink)] px-6 py-4 text-center text-sm tracking-wide text-white hover:opacity-90"
+            >
+              Find a retailer
+            </Link>
+            <Link
+              to="/contact"
+              className="flex-1 border border-[color:var(--ink)] px-6 py-4 text-center text-sm tracking-wide hover:bg-[color:var(--ink)] hover:text-white transition-colors"
+            >
+              Request information
+            </Link>
           </div>
 
-          <dl className="mt-12 divide-y divide-border border-y border-border">
+          <dl className="mt-12 divide-y divide-[color:var(--ink-light)]/60 border-y border-[color:var(--ink-light)]/60">
             {product.specs.map((s: { label: string; value: string }) => (
               <div key={s.label} className="flex justify-between gap-6 py-4 text-sm">
-                <dt className="text-muted-foreground">{s.label}</dt>
+                <dt className="text-[color:var(--ink-muted)]">{s.label}</dt>
                 <dd className="text-right">{s.value}</dd>
               </div>
             ))}
@@ -118,10 +126,10 @@ function ProductDetail() {
       </section>
 
       {related.length > 0 ? (
-        <section className="border-t border-border py-20">
+        <section className="border-t border-[color:var(--ink-light)]/40 py-20">
           <div className="container-x">
-            <h2 className="mb-10 text-3xl">From the same collection</h2>
-            <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            <h2 className="h-section mb-10 text-2xl md:text-3xl">From the same collection</h2>
+            <div className="grid gap-x-6 gap-y-12 grid-cols-2 md:grid-cols-4">
               {related.map((p: (typeof related)[number]) => (
                 <Link
                   key={p.slug}
@@ -129,17 +137,17 @@ function ProductDetail() {
                   params={{ slug: p.slug }}
                   className="group block"
                 >
-                  <div className="aspect-[4/5] overflow-hidden bg-background">
+                  <div className="relative aspect-square overflow-hidden bg-[color:var(--surface)]">
                     <img
                       src={p.image}
                       alt={p.name}
                       loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-[1.03]"
+                      className="absolute inset-0 h-full w-full object-contain p-6 mix-blend-multiply transition-opacity duration-300 group-hover:opacity-90"
                     />
                   </div>
-                  <div className="mt-4 flex justify-between text-sm">
-                    <span className="font-display text-lg">{p.name}</span>
-                    <span className="tabular-nums">€ {p.price}</span>
+                  <div className="mt-4">
+                    <div className="t-code">cod. {p.id.slice(-6)}</div>
+                    <div className="t-product mt-1">{p.name}</div>
                   </div>
                 </Link>
               ))}

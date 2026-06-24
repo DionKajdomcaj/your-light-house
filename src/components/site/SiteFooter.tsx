@@ -1,48 +1,55 @@
 import { Link } from "@tanstack/react-router";
+import { Instagram, Facebook, Linkedin } from "lucide-react";
 
 export function SiteFooter() {
   return (
-    <footer className="mt-32 border-t border-border bg-secondary/40">
-      <div className="container-x grid gap-12 py-20 md:grid-cols-4">
-        <div className="md:col-span-2">
-          <div className="font-display text-3xl">LightHouse</div>
-          <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-            A lighting house designing decorative and architectural fixtures
-            from a workshop in Brescia, Italy. Every piece assembled by hand,
-            shipped worldwide.
-          </p>
-        </div>
-
-        <div>
-          <div className="eyebrow text-muted-foreground">Catalogue</div>
-          <ul className="mt-5 space-y-3 text-sm">
-            <li><Link to="/collections" className="hover:underline">All collections</Link></li>
-            <li><Link to="/collections/$slug" params={{ slug: "modern" }} className="hover:underline">Modern</Link></li>
-            <li><Link to="/collections/$slug" params={{ slug: "classic" }} className="hover:underline">Classic</Link></li>
-            <li><Link to="/collections/$slug" params={{ slug: "outdoor" }} className="hover:underline">Outdoor</Link></li>
-            <li><Link to="/inspiration" className="hover:underline">Inspiration</Link></li>
-          </ul>
-        </div>
-
-        <div>
-          <div className="eyebrow text-muted-foreground">Maison</div>
-          <ul className="mt-5 space-y-3 text-sm">
-            <li><Link to="/about" className="hover:underline">The atelier</Link></li>
-            <li><Link to="/contact" className="hover:underline">Contact</Link></li>
-            <li><a href="#" className="hover:underline">Trade programme</a></li>
-            <li><a href="#" className="hover:underline">Press</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="border-t border-border">
-        <div className="container-x flex flex-col items-start justify-between gap-3 py-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
-          <div>© {new Date().getFullYear()} LightHouse — Maison de lumière, Brescia</div>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-foreground">Privacy</a>
-            <a href="#" className="hover:text-foreground">Terms</a>
-            <a href="#" className="hover:text-foreground">Cookies</a>
+    <footer className="bg-[color:var(--surface-soft)] text-[color:var(--ink)]">
+      <div className="container-x py-20">
+        <div className="grid gap-12 md:grid-cols-12">
+          <div className="md:col-span-5">
+            <div className="lowercase text-2xl" style={{ letterSpacing: "-0.01em" }}>
+              lighthouse
+            </div>
+            <address className="not-italic mt-6 text-sm leading-7 text-[color:var(--ink-muted)]">
+              Lighthouse S.p.A.<br />
+              Via dell'Industria, 12<br />
+              30035 Mirano (VE) — Italy<br />
+              T +39 041 000 0000
+            </address>
           </div>
+
+          <div className="md:col-span-3">
+            <div className="eyebrow">Catalog</div>
+            <ul className="mt-5 space-y-3 text-sm">
+              <li><Link to="/collections" className="hover:opacity-60">Indoor</Link></li>
+              <li><Link to="/collections" className="hover:opacity-60">Outdoor</Link></li>
+              <li><Link to="/collections" className="hover:opacity-60">Technical</Link></li>
+              <li><Link to="/inspiration" className="hover:opacity-60">Inspiration</Link></li>
+            </ul>
+          </div>
+
+          <div className="md:col-span-2">
+            <div className="eyebrow">Company</div>
+            <ul className="mt-5 space-y-3 text-sm">
+              <li><Link to="/about" className="hover:opacity-60">History</Link></li>
+              <li><Link to="/contact" className="hover:opacity-60">Where to buy</Link></li>
+              <li><Link to="/contact" className="hover:opacity-60">Contact</Link></li>
+            </ul>
+          </div>
+
+          <div className="md:col-span-2">
+            <div className="eyebrow">Follow</div>
+            <div className="mt-5 flex items-center gap-4">
+              <a href="#" aria-label="Instagram" className="hover:opacity-60"><Instagram className="h-4 w-4" strokeWidth={1.5} /></a>
+              <a href="#" aria-label="Facebook" className="hover:opacity-60"><Facebook className="h-4 w-4" strokeWidth={1.5} /></a>
+              <a href="#" aria-label="LinkedIn" className="hover:opacity-60"><Linkedin className="h-4 w-4" strokeWidth={1.5} /></a>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-16 flex flex-col gap-2 border-t border-[color:var(--ink-light)]/60 pt-6 text-xs text-[color:var(--ink-muted)] md:flex-row md:items-center md:justify-between">
+          <p>© {new Date().getFullYear()} Lighthouse — All rights reserved.</p>
+          <p>VAT IT 00000000000 — REA VE-000000</p>
         </div>
       </div>
     </footer>

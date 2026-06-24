@@ -5,9 +5,9 @@ import { SiteShell, PageHeader } from "@/components/site/SiteShell";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — LightHouse" },
-      { name: "description", content: "Visit the LightHouse showroom in Brescia or get in touch with the studio." },
-      { property: "og:title", content: "Contact — LightHouse" },
+      { title: "Where to buy — Lighthouse" },
+      { name: "description", content: "Find a Lighthouse retailer or contact the company directly." },
+      { property: "og:title", content: "Where to buy — Lighthouse" },
       { property: "og:url", content: "/contact" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
@@ -21,41 +21,45 @@ function ContactPage() {
   return (
     <SiteShell>
       <PageHeader
-        eyebrow="Contact"
-        title="Write, call, or come by."
-        intro="The studio answers within two working days. For trade enquiries please mention your firm and the project location."
+        eyebrow="Where to buy"
+        title="Speak to us"
+        intro="Find a retailer near you, request a catalog, or write to the company directly."
       />
 
-      <section className="container-x grid gap-16 pb-32 lg:grid-cols-12">
-        <div className="lg:col-span-5">
-          <div className="space-y-10 text-sm">
-            <div>
-              <div className="eyebrow text-muted-foreground">Showroom</div>
-              <div className="mt-3 font-display text-2xl">Via dei Mille 14</div>
-              <div className="text-muted-foreground">25122 Brescia, Italy</div>
-              <div className="mt-2 text-muted-foreground">
-                Tuesday – Saturday, 10 – 18
-              </div>
-            </div>
-            <div>
-              <div className="eyebrow text-muted-foreground">Studio</div>
-              <div className="mt-3"><a href="mailto:hello@lighthouse.studio" className="underline underline-offset-4">hello@lighthouse.studio</a></div>
-              <div>+39 030 555 0142</div>
-            </div>
-            <div>
-              <div className="eyebrow text-muted-foreground">Trade</div>
-              <div className="mt-3"><a href="mailto:trade@lighthouse.studio" className="underline underline-offset-4">trade@lighthouse.studio</a></div>
-            </div>
+      <section className="container-x grid gap-16 pb-32 md:grid-cols-12">
+        <div className="md:col-span-5 space-y-10">
+          <div>
+            <div className="eyebrow">Headquarters</div>
+            <address className="not-italic mt-4 text-sm leading-7 text-[color:var(--ink-muted)]">
+              Lighthouse S.p.A.<br />
+              Via dell'Industria, 12<br />
+              30035 Mirano (VE) — Italy<br />
+              T +39 041 000 0000<br />
+              info@lighthouse.example
+            </address>
+          </div>
+          <div>
+            <div className="eyebrow">Trade enquiries</div>
+            <p className="mt-4 text-sm text-[color:var(--ink-muted)] leading-relaxed">
+              Architects, interior designers and resellers — request access
+              to our trade catalog and pricing.
+            </p>
+          </div>
+          <div>
+            <div className="eyebrow">Hours</div>
+            <p className="mt-4 text-sm text-[color:var(--ink-muted)]">
+              Monday — Friday<br />
+              09:00 — 18:00 CET
+            </p>
           </div>
         </div>
 
-        <div className="lg:col-span-7">
+        <div className="md:col-span-7">
           {sent ? (
-            <div className="border border-border p-10">
-              <h2 className="font-display text-3xl">Thank you.</h2>
-              <p className="mt-3 text-muted-foreground">
-                We have your note and will reply within two working days.
-              </p>
+            <div className="border border-[color:var(--ink-light)]/60 p-10 text-center">
+              <div className="eyebrow">Thank you</div>
+              <h2 className="h-section mt-4 text-2xl md:text-3xl">Your message has been sent</h2>
+              <p className="mt-4 text-[color:var(--ink-muted)]">We will be in touch within two business days.</p>
             </div>
           ) : (
             <form
@@ -63,29 +67,27 @@ function ContactPage() {
                 e.preventDefault();
                 setSent(true);
               }}
-              className="grid gap-6"
+              className="space-y-6"
             >
-              <div className="grid gap-6 md:grid-cols-2">
-                <Field label="Your name" id="name" required />
-                <Field label="Email" id="email" type="email" required />
+              <div className="grid gap-6 sm:grid-cols-2">
+                <Field label="Name" name="name" />
+                <Field label="Email" name="email" type="email" />
               </div>
-              <Field label="Firm / project (optional)" id="firm" />
+              <Field label="Company / studio" name="company" />
+              <Field label="Country" name="country" />
               <div>
-                <label htmlFor="message" className="eyebrow text-muted-foreground">
-                  Message
-                </label>
+                <label className="eyebrow block">Message</label>
                 <textarea
-                  id="message"
                   required
                   rows={6}
-                  className="mt-2 w-full border border-border bg-background px-4 py-3 text-sm outline-none focus:border-foreground"
+                  className="mt-2 w-full border border-[color:var(--ink-light)]/80 bg-transparent px-0 py-3 text-base outline-none focus:border-[color:var(--ink)]"
                 />
               </div>
               <button
                 type="submit"
-                className="self-start bg-foreground px-8 py-4 text-sm tracking-wide text-background hover:bg-foreground/90"
+                className="inline-flex items-center gap-3 bg-[color:var(--ink)] px-8 py-4 text-sm tracking-wide text-white hover:opacity-90"
               >
-                Send message
+                Send message <span aria-hidden>→</span>
               </button>
             </form>
           )}
@@ -95,27 +97,16 @@ function ContactPage() {
   );
 }
 
-function Field({
-  label,
-  id,
-  type = "text",
-  required,
-}: {
-  label: string;
-  id: string;
-  type?: string;
-  required?: boolean;
-}) {
+function Field({ label, name, type = "text" }: { label: string; name: string; type?: string }) {
   return (
     <div>
-      <label htmlFor={id} className="eyebrow text-muted-foreground">
-        {label}
-      </label>
+      <label htmlFor={name} className="eyebrow block">{label}</label>
       <input
-        id={id}
+        id={name}
+        name={name}
         type={type}
-        required={required}
-        className="mt-2 w-full border border-border bg-background px-4 py-3 text-sm outline-none focus:border-foreground"
+        required
+        className="mt-2 w-full border-b border-[color:var(--ink-light)]/80 bg-transparent px-0 py-3 text-base outline-none focus:border-[color:var(--ink)]"
       />
     </div>
   );
