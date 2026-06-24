@@ -18,7 +18,7 @@ export const Route = createFileRoute("/products/technical")({
 });
 
 function TechPage() {
-  const items = products.filter((p) => p.collection === "track");
+  const items = products.filter((p) => (COLLECTION_GROUPS.technical as readonly string[]).includes(p.collection));
   return (
     <SiteShell overImage>
       <section className="relative h-[70vh] min-h-[480px] w-full overflow-hidden">
