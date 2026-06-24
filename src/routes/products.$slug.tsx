@@ -115,7 +115,7 @@ function ProductDetail() {
           </div>
 
           <dl className="mt-12 divide-y divide-[color:var(--ink-light)]/60 border-y border-[color:var(--ink-light)]/60">
-            {product.specs.map((s) => (
+            {product.specs.map((s: { label: string; value: string }) => (
               <div key={s.label} className="flex justify-between gap-6 py-4 text-sm">
                 <dt className="text-[color:var(--ink-muted)]">{s.label}</dt>
                 <dd className="text-right">{s.value}</dd>
@@ -130,7 +130,7 @@ function ProductDetail() {
           <div className="container-x">
             <h2 className="h-section mb-10 text-2xl md:text-3xl">From the same collection</h2>
             <div className="grid gap-x-6 gap-y-12 grid-cols-2 md:grid-cols-4">
-              {related.map((p) => (
+              {related.map((p: (typeof related)[number]) => (
                 <Link
                   key={p.slug}
                   to="/products/$slug"

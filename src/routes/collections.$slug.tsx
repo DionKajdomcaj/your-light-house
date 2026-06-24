@@ -72,7 +72,7 @@ function CollectionDetail() {
           <p className="text-[color:var(--ink-muted)]">No pieces in this collection yet.</p>
         ) : (
           <div className="grid gap-x-6 gap-y-16 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {products.map((p) => (
+            {products.map((p: (typeof products)[number]) => (
               <Link
                 key={p.slug}
                 to="/products/$slug"
