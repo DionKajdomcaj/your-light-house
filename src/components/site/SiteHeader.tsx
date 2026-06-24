@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 import { Menu, Search, Globe, X, ArrowLeft } from "lucide-react";
 
 const nav = [
-  { to: "/collections", label: "Indoor" },
-  { to: "/collections", label: "Outdoor" },
-  { to: "/collections", label: "Technical" },
-  { to: "/inspiration", label: "Inspiration" },
-  { to: "/about", label: "Company" },
-  { to: "/contact", label: "Where to buy" },
+  { to: "/company/history", label: "Company" },
+  { to: "/products", label: "Products" },
+  { to: "/new-releases", label: "New releases" },
+  { to: "/authorized-dealers", label: "Where to buy" },
+  { to: "/catalogs", label: "Downloads" },
+  { to: "/reserved-area", label: "Reserved area" },
 ] as const;
 
 export function SiteHeader({ overImage = false }: { overImage?: boolean }) {
@@ -40,10 +40,10 @@ export function SiteHeader({ overImage = false }: { overImage?: boolean }) {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex">
-          {nav.map((item, i) => (
+        <nav className="hidden items-center gap-7 lg:flex">
+          {nav.map((item) => (
             <Link
-              key={`${item.label}-${i}`}
+              key={item.label}
               to={item.to}
               className="text-sm font-normal transition-opacity hover:opacity-60"
             >
@@ -53,12 +53,13 @@ export function SiteHeader({ overImage = false }: { overImage?: boolean }) {
         </nav>
 
         <div className="flex items-center gap-1">
-          <button
+          <Link
+            to="/search"
             aria-label="Search"
             className="hidden h-9 w-9 items-center justify-center transition-opacity hover:opacity-60 lg:inline-flex"
           >
             <Search className="h-4 w-4" strokeWidth={1.5} />
-          </button>
+          </Link>
           <button
             aria-label="Language"
             className="hidden h-9 w-9 items-center justify-center transition-opacity hover:opacity-60 lg:inline-flex"
@@ -75,9 +76,8 @@ export function SiteHeader({ overImage = false }: { overImage?: boolean }) {
         </div>
       </div>
 
-      {/* Full-screen overlay menu */}
       {open && (
-        <div className="fixed inset-0 z-50 bg-white text-[color:var(--ink)]">
+        <div className="fixed inset-0 z-50 bg-white text-[color:var(--ink)] overflow-y-auto">
           <div className="container-x flex h-16 items-center justify-between lg:h-20">
             <button
               onClick={() => setOpen(false)}
@@ -91,10 +91,10 @@ export function SiteHeader({ overImage = false }: { overImage?: boolean }) {
               <X className="h-5 w-5" strokeWidth={1.5} />
             </button>
           </div>
-          <nav className="container-x mt-8 flex flex-col divide-y divide-[color:var(--ink-light)]/40 border-t border-[color:var(--ink-light)]/40">
-            {nav.map((item, i) => (
+          <nav className="container-x mt-8 flex flex-col divide-y divide-[color:var(--ink-light)]/40 border-t border-[color:var(--ink-light)]/40 pb-20">
+            {nav.map((item) => (
               <Link
-                key={`${item.label}-m-${i}`}
+                key={`m-${item.label}`}
                 to={item.to}
                 onClick={() => setOpen(false)}
                 className="flex items-center justify-between py-6 text-2xl uppercase tracking-[0.06em] font-light"
@@ -103,6 +103,9 @@ export function SiteHeader({ overImage = false }: { overImage?: boolean }) {
                 <span aria-hidden>→</span>
               </Link>
             ))}
+            <Link to="/search" onClick={() => setOpen(false)} className="flex items-center justify-between py-6 text-2xl uppercase tracking-[0.06em] font-light">
+              Search <span aria-hidden>→</span>
+            </Link>
           </nav>
         </div>
       )}
