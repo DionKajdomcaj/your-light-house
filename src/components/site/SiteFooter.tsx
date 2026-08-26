@@ -11,13 +11,13 @@ export function SiteFooter() {
               lighthouse
             </div>
             <address className="not-italic mt-6 text-sm leading-7 text-[color:var(--ink-muted)]">
-              Lighthouse S.p.A.<br />
-              Via Taglio Destro 32<br />
-              30035 Mirano (VE) — Italy<br />
-              T +39 041 57 90 500
+              Lighthouse SH.P.K.<br />
+              Veterrnik - 1<br />
+              10000, Prishtine, XK<br />
+              T +383 45 555 355
             </address>
             <div className="mt-6 text-sm">
-              Get in touch — <a href="mailto:info@lighthouse.example" className="hover:opacity-60">info@lighthouse.example</a>
+              Get in touch — <a href="mailto:info@lighthouse-kos.com" className="hover:opacity-60">info@lighthouse-kos.com</a>
             </div>
           </div>
 
