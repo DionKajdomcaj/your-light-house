@@ -42,7 +42,7 @@ export function SiteFooter() {
           </div>
 
           <div className="md:col-span-2">
-            <div className="eyebrow">More</div>
+            <div className="eyebrow">{"\n"}</div>
             <ul className="mt-5 space-y-3 text-sm">
               <li><a href="#" className="hover:opacity-60">Whistleblowing</a></li>
               <li><a href="#" className="hover:opacity-60">Warranty policy</a></li>
@@ -62,8 +62,8 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-16 flex flex-col gap-2 border-t border-[color:var(--ink-light)]/60 pt-6 text-xs text-[color:var(--ink-muted)] md:flex-row md:items-center md:justify-between">
-          <p>© {new Date().getFullYear()} Lighthouse S.p.A. — All rights reserved.</p>
-          <p>P.Iva C.F. 02420040277</p>
+          <p>© {new Date().getFullYear()} Lighthouse SH.P.K. — All rights reserved.</p>
+          <p>{"\n"}</p>
         </div>
       </div>
     </footer>
