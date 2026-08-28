@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Facebook, Linkedin } from "lucide-react";
+import { Instagram } from "lucide-react";
 
 export function SiteFooter() {
   return (
