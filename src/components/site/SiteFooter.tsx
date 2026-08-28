@@ -27,35 +27,6 @@ export function SiteFooter() {
             </div>
           </div>
 
-          <div className="md:col-span-2">
-            <div className="eyebrow">Company</div>
-            <ul className="mt-5 space-y-3 text-sm">
-              <li><Link to="/company/contacts" className="hover:opacity-60">Contacts</Link></li>
-              <li><Link to="/flagship-store" className="hover:opacity-60">Lighthouse store</Link></li>
-              <li><Link to="/reserved-area" className="hover:opacity-60">Reserved area</Link></li>
-              <li><Link to="/authorized-dealers" className="hover:opacity-60">Authorized dealers</Link></li>
-            </ul>
-          </div>
-
-          <div className="md:col-span-2">
-            <div className="eyebrow">Catalog</div>
-            <ul className="mt-5 space-y-3 text-sm">
-              <li><Link to="/company/history" className="hover:opacity-60">History</Link></li>
-              <li><Link to="/products" className="hover:opacity-60">All collections</Link></li>
-              <li><Link to="/catalogs" className="hover:opacity-60">Downloads</Link></li>
-              <li><Link to="/privacy-policy" className="hover:opacity-60">Privacy & cookies</Link></li>
-            </ul>
-          </div>
-
-          <div className="md:col-span-2">
-            <div className="eyebrow">{"\n"}</div>
-            <ul className="mt-5 space-y-3 text-sm">
-              <li><a href="#" className="hover:opacity-60">Whistleblowing</a></li>
-              <li><a href="#" className="hover:opacity-60">Warranty policy</a></li>
-              <li><Link to="/company/warehouse" className="hover:opacity-60">Warehouse</Link></li>
-              <li><Link to="/company/company-profile" className="hover:opacity-60">Company profile</Link></li>
-            </ul>
-          </div>
 
         </div>
 
