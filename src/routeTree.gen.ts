@@ -9,90 +9,35 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SearchRouteImport } from './routes/search'
-import { Route as ReservedAreaRouteImport } from './routes/reserved-area'
-import { Route as ProductsRouteImport } from './routes/products'
-import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
-import { Route as NewReleasesRouteImport } from './routes/new-releases'
-import { Route as InspirationRouteImport } from './routes/inspiration'
-import { Route as FlagshipStoreRouteImport } from './routes/flagship-store'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as CompanyRouteImport } from './routes/company'
-import { Route as CatalogsRouteImport } from './routes/catalogs'
-import { Route as BulbsRouteImport } from './routes/bulbs'
-import { Route as AuthorizedDealersRouteImport } from './routes/authorized-dealers'
-import { Route as AccessoriesRouteImport } from './routes/accessories'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ProductsIndexRouteImport } from './routes/products.index'
-import { Route as CompanyIndexRouteImport } from './routes/company.index'
+import { Route as AccessoriesRouteImport } from './routes/accessories'
+import { Route as AuthorizedDealersRouteImport } from './routes/authorized-dealers'
+import { Route as BulbsRouteImport } from './routes/bulbs'
+import { Route as CatalogsRouteImport } from './routes/catalogs'
+import { Route as CompanyRouteImport } from './routes/company'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as FlagshipStoreRouteImport } from './routes/flagship-store'
+import { Route as InspirationRouteImport } from './routes/inspiration'
+import { Route as NewReleasesRouteImport } from './routes/new-releases'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as ProductsRouteImport } from './routes/products'
+import { Route as ReservedAreaRouteImport } from './routes/reserved-area'
+import { Route as SearchRouteImport } from './routes/search'
 import { Route as CollectionsIndexRouteImport } from './routes/collections.index'
-import { Route as ProductsTechnicalRouteImport } from './routes/products.technical'
-import { Route as ProductsOutdoorRouteImport } from './routes/products.outdoor'
-import { Route as ProductsIndoorRouteImport } from './routes/products.indoor'
-import { Route as ProductsSlugRouteImport } from './routes/products.$slug'
-import { Route as CompanyWarehouseRouteImport } from './routes/company.warehouse'
-import { Route as CompanyContactsRouteImport } from './routes/company.contacts'
-import { Route as CompanyCompanyProfileRouteImport } from './routes/company.company-profile'
 import { Route as CollectionsSlugRouteImport } from './routes/collections.$slug'
+import { Route as CompanyIndexRouteImport } from './routes/company.index'
+import { Route as CompanyCompanyProfileRouteImport } from './routes/company.company-profile'
+import { Route as CompanyContactsRouteImport } from './routes/company.contacts'
+import { Route as CompanyWarehouseRouteImport } from './routes/company.warehouse'
+import { Route as ProductsIndexRouteImport } from './routes/products.index'
+import { Route as ProductsSlugRouteImport } from './routes/products.$slug'
+import { Route as ProductsIndoorRouteImport } from './routes/products.indoor'
+import { Route as ProductsOutdoorRouteImport } from './routes/products.outdoor'
+import { Route as ProductsTechnicalRouteImport } from './routes/products.technical'
 
-const SearchRoute = SearchRouteImport.update({
-  id: '/search',
-  path: '/search',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ReservedAreaRoute = ReservedAreaRouteImport.update({
-  id: '/reserved-area',
-  path: '/reserved-area',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProductsRoute = ProductsRouteImport.update({
-  id: '/products',
-  path: '/products',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
-  id: '/privacy-policy',
-  path: '/privacy-policy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const NewReleasesRoute = NewReleasesRouteImport.update({
-  id: '/new-releases',
-  path: '/new-releases',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const InspirationRoute = InspirationRouteImport.update({
-  id: '/inspiration',
-  path: '/inspiration',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FlagshipStoreRoute = FlagshipStoreRouteImport.update({
-  id: '/flagship-store',
-  path: '/flagship-store',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CompanyRoute = CompanyRouteImport.update({
-  id: '/company',
-  path: '/company',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CatalogsRoute = CatalogsRouteImport.update({
-  id: '/catalogs',
-  path: '/catalogs',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BulbsRoute = BulbsRouteImport.update({
-  id: '/bulbs',
-  path: '/bulbs',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AuthorizedDealersRoute = AuthorizedDealersRouteImport.update({
-  id: '/authorized-dealers',
-  path: '/authorized-dealers',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AccessoriesRoute = AccessoriesRouteImport.update({
@@ -100,54 +45,79 @@ const AccessoriesRoute = AccessoriesRouteImport.update({
   path: '/accessories',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const AuthorizedDealersRoute = AuthorizedDealersRouteImport.update({
+  id: '/authorized-dealers',
+  path: '/authorized-dealers',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProductsIndexRoute = ProductsIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => ProductsRoute,
+const BulbsRoute = BulbsRouteImport.update({
+  id: '/bulbs',
+  path: '/bulbs',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const CompanyIndexRoute = CompanyIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => CompanyRoute,
+const CatalogsRoute = CatalogsRouteImport.update({
+  id: '/catalogs',
+  path: '/catalogs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompanyRoute = CompanyRouteImport.update({
+  id: '/company',
+  path: '/company',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FlagshipStoreRoute = FlagshipStoreRouteImport.update({
+  id: '/flagship-store',
+  path: '/flagship-store',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InspirationRoute = InspirationRouteImport.update({
+  id: '/inspiration',
+  path: '/inspiration',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NewReleasesRoute = NewReleasesRouteImport.update({
+  id: '/new-releases',
+  path: '/new-releases',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsRoute = ProductsRouteImport.update({
+  id: '/products',
+  path: '/products',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReservedAreaRoute = ReservedAreaRouteImport.update({
+  id: '/reserved-area',
+  path: '/reserved-area',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SearchRoute = SearchRouteImport.update({
+  id: '/search',
+  path: '/search',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const CollectionsIndexRoute = CollectionsIndexRouteImport.update({
   id: '/collections/',
   path: '/collections/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProductsTechnicalRoute = ProductsTechnicalRouteImport.update({
-  id: '/technical',
-  path: '/technical',
-  getParentRoute: () => ProductsRoute,
+const CollectionsSlugRoute = CollectionsSlugRouteImport.update({
+  id: '/collections/$slug',
+  path: '/collections/$slug',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const ProductsOutdoorRoute = ProductsOutdoorRouteImport.update({
-  id: '/outdoor',
-  path: '/outdoor',
-  getParentRoute: () => ProductsRoute,
-} as any)
-const ProductsIndoorRoute = ProductsIndoorRouteImport.update({
-  id: '/indoor',
-  path: '/indoor',
-  getParentRoute: () => ProductsRoute,
-} as any)
-const ProductsSlugRoute = ProductsSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => ProductsRoute,
-} as any)
-const CompanyWarehouseRoute = CompanyWarehouseRouteImport.update({
-  id: '/warehouse',
-  path: '/warehouse',
-  getParentRoute: () => CompanyRoute,
-} as any)
-const CompanyContactsRoute = CompanyContactsRouteImport.update({
-  id: '/contacts',
-  path: '/contacts',
+const CompanyIndexRoute = CompanyIndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => CompanyRoute,
 } as any)
 const CompanyCompanyProfileRoute = CompanyCompanyProfileRouteImport.update({
@@ -155,10 +125,40 @@ const CompanyCompanyProfileRoute = CompanyCompanyProfileRouteImport.update({
   path: '/company-profile',
   getParentRoute: () => CompanyRoute,
 } as any)
-const CollectionsSlugRoute = CollectionsSlugRouteImport.update({
-  id: '/collections/$slug',
-  path: '/collections/$slug',
-  getParentRoute: () => rootRouteImport,
+const CompanyContactsRoute = CompanyContactsRouteImport.update({
+  id: '/contacts',
+  path: '/contacts',
+  getParentRoute: () => CompanyRoute,
+} as any)
+const CompanyWarehouseRoute = CompanyWarehouseRouteImport.update({
+  id: '/warehouse',
+  path: '/warehouse',
+  getParentRoute: () => CompanyRoute,
+} as any)
+const ProductsIndexRoute = ProductsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ProductsRoute,
+} as any)
+const ProductsSlugRoute = ProductsSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => ProductsRoute,
+} as any)
+const ProductsIndoorRoute = ProductsIndoorRouteImport.update({
+  id: '/indoor',
+  path: '/indoor',
+  getParentRoute: () => ProductsRoute,
+} as any)
+const ProductsOutdoorRoute = ProductsOutdoorRouteImport.update({
+  id: '/outdoor',
+  path: '/outdoor',
+  getParentRoute: () => ProductsRoute,
+} as any)
+const ProductsTechnicalRoute = ProductsTechnicalRouteImport.update({
+  id: '/technical',
+  path: '/technical',
+  getParentRoute: () => ProductsRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -344,88 +344,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/search': {
-      id: '/search'
-      path: '/search'
-      fullPath: '/search'
-      preLoaderRoute: typeof SearchRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/reserved-area': {
-      id: '/reserved-area'
-      path: '/reserved-area'
-      fullPath: '/reserved-area'
-      preLoaderRoute: typeof ReservedAreaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/products': {
-      id: '/products'
-      path: '/products'
-      fullPath: '/products'
-      preLoaderRoute: typeof ProductsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacy-policy': {
-      id: '/privacy-policy'
-      path: '/privacy-policy'
-      fullPath: '/privacy-policy'
-      preLoaderRoute: typeof PrivacyPolicyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/new-releases': {
-      id: '/new-releases'
-      path: '/new-releases'
-      fullPath: '/new-releases'
-      preLoaderRoute: typeof NewReleasesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/inspiration': {
-      id: '/inspiration'
-      path: '/inspiration'
-      fullPath: '/inspiration'
-      preLoaderRoute: typeof InspirationRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/flagship-store': {
-      id: '/flagship-store'
-      path: '/flagship-store'
-      fullPath: '/flagship-store'
-      preLoaderRoute: typeof FlagshipStoreRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/company': {
-      id: '/company'
-      path: '/company'
-      fullPath: '/company'
-      preLoaderRoute: typeof CompanyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/catalogs': {
-      id: '/catalogs'
-      path: '/catalogs'
-      fullPath: '/catalogs'
-      preLoaderRoute: typeof CatalogsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/bulbs': {
-      id: '/bulbs'
-      path: '/bulbs'
-      fullPath: '/bulbs'
-      preLoaderRoute: typeof BulbsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/authorized-dealers': {
-      id: '/authorized-dealers'
-      path: '/authorized-dealers'
-      fullPath: '/authorized-dealers'
-      preLoaderRoute: typeof AuthorizedDealersRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/accessories': {
@@ -435,26 +358,89 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AccessoriesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/authorized-dealers': {
+      id: '/authorized-dealers'
+      path: '/authorized-dealers'
+      fullPath: '/authorized-dealers'
+      preLoaderRoute: typeof AuthorizedDealersRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/products/': {
-      id: '/products/'
-      path: '/'
-      fullPath: '/products/'
-      preLoaderRoute: typeof ProductsIndexRouteImport
-      parentRoute: typeof ProductsRoute
+    '/bulbs': {
+      id: '/bulbs'
+      path: '/bulbs'
+      fullPath: '/bulbs'
+      preLoaderRoute: typeof BulbsRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/company/': {
-      id: '/company/'
-      path: '/'
-      fullPath: '/company/'
-      preLoaderRoute: typeof CompanyIndexRouteImport
-      parentRoute: typeof CompanyRoute
+    '/catalogs': {
+      id: '/catalogs'
+      path: '/catalogs'
+      fullPath: '/catalogs'
+      preLoaderRoute: typeof CatalogsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/company': {
+      id: '/company'
+      path: '/company'
+      fullPath: '/company'
+      preLoaderRoute: typeof CompanyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/flagship-store': {
+      id: '/flagship-store'
+      path: '/flagship-store'
+      fullPath: '/flagship-store'
+      preLoaderRoute: typeof FlagshipStoreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/inspiration': {
+      id: '/inspiration'
+      path: '/inspiration'
+      fullPath: '/inspiration'
+      preLoaderRoute: typeof InspirationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/new-releases': {
+      id: '/new-releases'
+      path: '/new-releases'
+      fullPath: '/new-releases'
+      preLoaderRoute: typeof NewReleasesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products': {
+      id: '/products'
+      path: '/products'
+      fullPath: '/products'
+      preLoaderRoute: typeof ProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reserved-area': {
+      id: '/reserved-area'
+      path: '/reserved-area'
+      fullPath: '/reserved-area'
+      preLoaderRoute: typeof ReservedAreaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/search': {
+      id: '/search'
+      path: '/search'
+      fullPath: '/search'
+      preLoaderRoute: typeof SearchRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/collections/': {
       id: '/collections/'
@@ -463,46 +449,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CollectionsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/products/technical': {
-      id: '/products/technical'
-      path: '/technical'
-      fullPath: '/products/technical'
-      preLoaderRoute: typeof ProductsTechnicalRouteImport
-      parentRoute: typeof ProductsRoute
+    '/collections/$slug': {
+      id: '/collections/$slug'
+      path: '/collections/$slug'
+      fullPath: '/collections/$slug'
+      preLoaderRoute: typeof CollectionsSlugRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/products/outdoor': {
-      id: '/products/outdoor'
-      path: '/outdoor'
-      fullPath: '/products/outdoor'
-      preLoaderRoute: typeof ProductsOutdoorRouteImport
-      parentRoute: typeof ProductsRoute
-    }
-    '/products/indoor': {
-      id: '/products/indoor'
-      path: '/indoor'
-      fullPath: '/products/indoor'
-      preLoaderRoute: typeof ProductsIndoorRouteImport
-      parentRoute: typeof ProductsRoute
-    }
-    '/products/$slug': {
-      id: '/products/$slug'
-      path: '/$slug'
-      fullPath: '/products/$slug'
-      preLoaderRoute: typeof ProductsSlugRouteImport
-      parentRoute: typeof ProductsRoute
-    }
-    '/company/warehouse': {
-      id: '/company/warehouse'
-      path: '/warehouse'
-      fullPath: '/company/warehouse'
-      preLoaderRoute: typeof CompanyWarehouseRouteImport
-      parentRoute: typeof CompanyRoute
-    }
-    '/company/contacts': {
-      id: '/company/contacts'
-      path: '/contacts'
-      fullPath: '/company/contacts'
-      preLoaderRoute: typeof CompanyContactsRouteImport
+    '/company/': {
+      id: '/company/'
+      path: '/'
+      fullPath: '/company/'
+      preLoaderRoute: typeof CompanyIndexRouteImport
       parentRoute: typeof CompanyRoute
     }
     '/company/company-profile': {
@@ -512,12 +470,54 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CompanyCompanyProfileRouteImport
       parentRoute: typeof CompanyRoute
     }
-    '/collections/$slug': {
-      id: '/collections/$slug'
-      path: '/collections/$slug'
-      fullPath: '/collections/$slug'
-      preLoaderRoute: typeof CollectionsSlugRouteImport
-      parentRoute: typeof rootRouteImport
+    '/company/contacts': {
+      id: '/company/contacts'
+      path: '/contacts'
+      fullPath: '/company/contacts'
+      preLoaderRoute: typeof CompanyContactsRouteImport
+      parentRoute: typeof CompanyRoute
+    }
+    '/company/warehouse': {
+      id: '/company/warehouse'
+      path: '/warehouse'
+      fullPath: '/company/warehouse'
+      preLoaderRoute: typeof CompanyWarehouseRouteImport
+      parentRoute: typeof CompanyRoute
+    }
+    '/products/': {
+      id: '/products/'
+      path: '/'
+      fullPath: '/products/'
+      preLoaderRoute: typeof ProductsIndexRouteImport
+      parentRoute: typeof ProductsRoute
+    }
+    '/products/$slug': {
+      id: '/products/$slug'
+      path: '/$slug'
+      fullPath: '/products/$slug'
+      preLoaderRoute: typeof ProductsSlugRouteImport
+      parentRoute: typeof ProductsRoute
+    }
+    '/products/indoor': {
+      id: '/products/indoor'
+      path: '/indoor'
+      fullPath: '/products/indoor'
+      preLoaderRoute: typeof ProductsIndoorRouteImport
+      parentRoute: typeof ProductsRoute
+    }
+    '/products/outdoor': {
+      id: '/products/outdoor'
+      path: '/outdoor'
+      fullPath: '/products/outdoor'
+      preLoaderRoute: typeof ProductsOutdoorRouteImport
+      parentRoute: typeof ProductsRoute
+    }
+    '/products/technical': {
+      id: '/products/technical'
+      path: '/technical'
+      fullPath: '/products/technical'
+      preLoaderRoute: typeof ProductsTechnicalRouteImport
+      parentRoute: typeof ProductsRoute
     }
   }
 }
