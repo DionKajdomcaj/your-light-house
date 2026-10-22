@@ -31,11 +31,12 @@ function ContactPage() {
           <div>
             <div className="eyebrow">Headquarters</div>
             <address className="not-italic mt-4 text-sm leading-7 text-[color:var(--ink-muted)]">
-              Lighthouse S.p.A.<br />
-              Via dell'Industria, 12<br />
-              30035 Mirano (VE) — Italy<br />
-              T +39 041 000 0000<br />
-              info@lighthouse.example
+              Lighthouse SH.P.K.<br />
+              Veterrnik - 1<br />
+              10000, Prishtine, XK<br />
+              T +383 45 555 355<br />
+              <a href="mailto:info@lighthouse-kos.com" className="hover:opacity-60">info@lighthouse-kos.com</a><br />
+              <a href="https://www.instagram.com/lighthouse.studio" target="_blank" rel="noopener noreferrer" className="hover:opacity-60">@lighthouse.studio</a>
             </address>
           </div>
           <div>

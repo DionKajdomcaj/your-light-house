@@ -7,9 +7,9 @@ import storyImg from "@/assets/story.jpg";
 export const Route = createFileRoute("/flagship-store")({
   head: () => ({
     meta: [
-      { title: "Lighthouse store — Mirano" },
-      { name: "description", content: "Visit the Lighthouse flagship store in Mirano (VE) — the full catalog under one roof." },
-      { property: "og:title", content: "Lighthouse store — Mirano" },
+      { title: "Lighthouse store — Prishtine" },
+      { name: "description", content: "Visit the Lighthouse store in Prishtine — the full catalog under one roof." },
+      { property: "og:title", content: "Lighthouse store — Prishtine" },
       { property: "og:image", content: insp1 },
       { property: "og:url", content: "/flagship-store" },
     ],
@@ -21,7 +21,7 @@ export const Route = createFileRoute("/flagship-store")({
 function FlagshipStore() {
   return (
     <SiteShell>
-      <PageHeader eyebrow="Showroom" title="The Mirano store" />
+      <PageHeader eyebrow="Showroom" title="The Prishtine store" />
 
       <section className="container-x pb-16">
         <div className="aspect-[16/9] overflow-hidden">
@@ -34,9 +34,12 @@ function FlagshipStore() {
           <div>
             <div className="eyebrow">Address</div>
             <p className="not-italic mt-3 leading-7 text-[color:var(--ink-muted)]">
-              Via Taglio Destro 32<br />
-              30035 Mirano (VE) — Italy<br />
-              T +39 041 57 90 500
+              Lighthouse SH.P.K.<br />
+              Veterrnik - 1<br />
+              10000, Prishtine, XK<br />
+              T +383 45 555 355<br />
+              <a href="mailto:info@lighthouse-kos.com" className="hover:opacity-60">info@lighthouse-kos.com</a><br />
+              <a href="https://www.instagram.com/lighthouse.studio" target="_blank" rel="noopener noreferrer" className="hover:opacity-60">@lighthouse.studio</a>
             </p>
           </div>
           <div>
@@ -50,7 +53,7 @@ function FlagshipStore() {
         </div>
         <div className="md:col-span-7">
           <p className="text-lg leading-relaxed">
-            Eight hundred square metres next to the workshop. Every active
+            A full showroom next to the warehouse. Every active
             collection in the catalog, hung and lit. Walk in to specify a
             project, see a fixture in person, or just to look.
           </p>
@@ -69,7 +72,7 @@ function FlagshipStore() {
         <div className="aspect-[16/9] overflow-hidden border border-[color:var(--ink-light)]/40 grayscale">
           <iframe
             title="Map to the Lighthouse store"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=12.10%2C45.49%2C12.13%2C45.51&amp;layer=mapnik"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=20.89%2C42.65%2C20.93%2C42.68&amp;layer=mapnik"
             className="h-full w-full"
             loading="lazy"
           />

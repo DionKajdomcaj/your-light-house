@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Menu, Search, X, ArrowLeft } from "lucide-react";
 
 const nav = [
-  { to: "/company/history", label: "Company" },
+  { to: "/company/contacts", label: "Company" },
   { to: "/products", label: "Products" },
 ] as const;
 

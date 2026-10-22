@@ -16,12 +16,12 @@ export const Route = createFileRoute("/privacy-policy")({
 });
 
 const sections = [
-  { id: "controller", t: "Data controller", b: "Lighthouse S.p.A., Via Taglio Destro 32, 30035 Mirano (VE), Italy. VAT IT 02420040277." },
+  { id: "controller", t: "Data controller", b: "Lighthouse SH.P.K., Veterrnik - 1, 10000 Prishtine, XK. T +383 45 555 355, info@lighthouse-kos.com." },
   { id: "data", t: "Data we collect", b: "Contact form submissions, dealer account information, analytics on anonymous visit patterns. We do not knowingly collect personal data from children under 16." },
   { id: "purpose", t: "Purposes of processing", b: "To answer enquiries, deliver B2B services, fulfil legal obligations, and improve the site." },
   { id: "legal", t: "Legal basis", b: "Consent, contractual necessity, and legitimate interest as defined by Regulation (EU) 2016/679 (GDPR)." },
   { id: "retention", t: "Retention", b: "Contact form data is kept for 24 months. Dealer accounts are kept for the duration of the commercial relationship plus 10 years." },
-  { id: "rights", t: "Your rights", b: "Access, rectification, erasure, restriction, portability and objection. Contact privacy@lighthouse.example." },
+  { id: "rights", t: "Your rights", b: "Access, rectification, erasure, restriction, portability and objection. Contact info@lighthouse-kos.com." },
   { id: "cookies", t: "Cookies", b: "We use strictly necessary cookies by default. Analytics and marketing cookies require your consent via the banner shown on first visit." },
   { id: "transfers", t: "International transfers", b: "Where data leaves the EEA it is protected by Standard Contractual Clauses approved by the European Commission." },
   { id: "updates", t: "Updates to this policy", b: "We will post any changes here with a revised effective date." },

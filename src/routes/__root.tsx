@@ -34,7 +34,7 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: { error: unknown; reset: () => void }) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
@@ -78,7 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Lighthouse — Light up your ideal" },
-      { name: "description", content: "Lighthouse — decorative and technical lighting. Indoor, outdoor, recessed and systems. Family-run, Italian-made." },
+      { name: "description", content: "Lighthouse — decorative and technical lighting. Indoor, outdoor, recessed and systems. Family-run, from Prishtine." },
       { property: "og:site_name", content: "Lighthouse" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
