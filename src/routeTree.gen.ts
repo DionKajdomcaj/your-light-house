@@ -22,7 +22,6 @@ import { Route as CatalogsRouteImport } from './routes/catalogs'
 import { Route as BulbsRouteImport } from './routes/bulbs'
 import { Route as AuthorizedDealersRouteImport } from './routes/authorized-dealers'
 import { Route as AccessoriesRouteImport } from './routes/accessories'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProductsIndexRouteImport } from './routes/products.index'
 import { Route as CompanyIndexRouteImport } from './routes/company.index'
@@ -32,7 +31,6 @@ import { Route as ProductsOutdoorRouteImport } from './routes/products.outdoor'
 import { Route as ProductsIndoorRouteImport } from './routes/products.indoor'
 import { Route as ProductsSlugRouteImport } from './routes/products.$slug'
 import { Route as CompanyWarehouseRouteImport } from './routes/company.warehouse'
-import { Route as CompanyHistoryRouteImport } from './routes/company.history'
 import { Route as CompanyContactsRouteImport } from './routes/company.contacts'
 import { Route as CompanyCompanyProfileRouteImport } from './routes/company.company-profile'
 import { Route as CollectionsSlugRouteImport } from './routes/collections.$slug'
@@ -102,11 +100,6 @@ const AccessoriesRoute = AccessoriesRouteImport.update({
   path: '/accessories',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AboutRoute = AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -152,11 +145,6 @@ const CompanyWarehouseRoute = CompanyWarehouseRouteImport.update({
   path: '/warehouse',
   getParentRoute: () => CompanyRoute,
 } as any)
-const CompanyHistoryRoute = CompanyHistoryRouteImport.update({
-  id: '/history',
-  path: '/history',
-  getParentRoute: () => CompanyRoute,
-} as any)
 const CompanyContactsRoute = CompanyContactsRouteImport.update({
   id: '/contacts',
   path: '/contacts',
@@ -175,7 +163,6 @@ const CollectionsSlugRoute = CollectionsSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/accessories': typeof AccessoriesRoute
   '/authorized-dealers': typeof AuthorizedDealersRoute
   '/bulbs': typeof BulbsRoute
@@ -192,7 +179,6 @@ export interface FileRoutesByFullPath {
   '/collections/$slug': typeof CollectionsSlugRoute
   '/company/company-profile': typeof CompanyCompanyProfileRoute
   '/company/contacts': typeof CompanyContactsRoute
-  '/company/history': typeof CompanyHistoryRoute
   '/company/warehouse': typeof CompanyWarehouseRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/products/indoor': typeof ProductsIndoorRoute
@@ -204,7 +190,6 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/accessories': typeof AccessoriesRoute
   '/authorized-dealers': typeof AuthorizedDealersRoute
   '/bulbs': typeof BulbsRoute
@@ -219,7 +204,6 @@ export interface FileRoutesByTo {
   '/collections/$slug': typeof CollectionsSlugRoute
   '/company/company-profile': typeof CompanyCompanyProfileRoute
   '/company/contacts': typeof CompanyContactsRoute
-  '/company/history': typeof CompanyHistoryRoute
   '/company/warehouse': typeof CompanyWarehouseRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/products/indoor': typeof ProductsIndoorRoute
@@ -232,7 +216,6 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/accessories': typeof AccessoriesRoute
   '/authorized-dealers': typeof AuthorizedDealersRoute
   '/bulbs': typeof BulbsRoute
@@ -249,7 +232,6 @@ export interface FileRoutesById {
   '/collections/$slug': typeof CollectionsSlugRoute
   '/company/company-profile': typeof CompanyCompanyProfileRoute
   '/company/contacts': typeof CompanyContactsRoute
-  '/company/history': typeof CompanyHistoryRoute
   '/company/warehouse': typeof CompanyWarehouseRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/products/indoor': typeof ProductsIndoorRoute
@@ -263,7 +245,6 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/about'
     | '/accessories'
     | '/authorized-dealers'
     | '/bulbs'
@@ -280,7 +261,6 @@ export interface FileRouteTypes {
     | '/collections/$slug'
     | '/company/company-profile'
     | '/company/contacts'
-    | '/company/history'
     | '/company/warehouse'
     | '/products/$slug'
     | '/products/indoor'
@@ -292,7 +272,6 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/about'
     | '/accessories'
     | '/authorized-dealers'
     | '/bulbs'
@@ -307,7 +286,6 @@ export interface FileRouteTypes {
     | '/collections/$slug'
     | '/company/company-profile'
     | '/company/contacts'
-    | '/company/history'
     | '/company/warehouse'
     | '/products/$slug'
     | '/products/indoor'
@@ -319,7 +297,6 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
-    | '/about'
     | '/accessories'
     | '/authorized-dealers'
     | '/bulbs'
@@ -336,7 +313,6 @@ export interface FileRouteTypes {
     | '/collections/$slug'
     | '/company/company-profile'
     | '/company/contacts'
-    | '/company/history'
     | '/company/warehouse'
     | '/products/$slug'
     | '/products/indoor'
@@ -349,7 +325,6 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRoute
   AccessoriesRoute: typeof AccessoriesRoute
   AuthorizedDealersRoute: typeof AuthorizedDealersRoute
   BulbsRoute: typeof BulbsRoute
@@ -460,13 +435,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AccessoriesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
@@ -530,13 +498,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CompanyWarehouseRouteImport
       parentRoute: typeof CompanyRoute
     }
-    '/company/history': {
-      id: '/company/history'
-      path: '/history'
-      fullPath: '/company/history'
-      preLoaderRoute: typeof CompanyHistoryRouteImport
-      parentRoute: typeof CompanyRoute
-    }
     '/company/contacts': {
       id: '/company/contacts'
       path: '/contacts'
@@ -564,7 +525,6 @@ declare module '@tanstack/react-router' {
 interface CompanyRouteChildren {
   CompanyCompanyProfileRoute: typeof CompanyCompanyProfileRoute
   CompanyContactsRoute: typeof CompanyContactsRoute
-  CompanyHistoryRoute: typeof CompanyHistoryRoute
   CompanyWarehouseRoute: typeof CompanyWarehouseRoute
   CompanyIndexRoute: typeof CompanyIndexRoute
 }
@@ -572,7 +532,6 @@ interface CompanyRouteChildren {
 const CompanyRouteChildren: CompanyRouteChildren = {
   CompanyCompanyProfileRoute: CompanyCompanyProfileRoute,
   CompanyContactsRoute: CompanyContactsRoute,
-  CompanyHistoryRoute: CompanyHistoryRoute,
   CompanyWarehouseRoute: CompanyWarehouseRoute,
   CompanyIndexRoute: CompanyIndexRoute,
 }
@@ -602,7 +561,6 @@ const ProductsRouteWithChildren = ProductsRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
   AccessoriesRoute: AccessoriesRoute,
   AuthorizedDealersRoute: AuthorizedDealersRoute,
   BulbsRoute: BulbsRoute,
