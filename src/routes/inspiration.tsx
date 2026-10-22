@@ -26,8 +26,8 @@ function InspirationPage() {
     { src: insp2, caption: "Hotel lobby — Florence" },
     { src: insp3, caption: "Restaurant — Bologna" },
     { src: insp4, caption: "Bedroom suite — Como" },
-    { src: storyImg, caption: "Atelier — Mirano" },
-    { src: heroImg, caption: "Showroom — Venice" },
+    { src: storyImg, caption: "Atelier — Prishtine" },
+    { src: heroImg, caption: "Showroom — Prishtine" },
   ];
 
   return (

@@ -36,7 +36,7 @@ function NewReleases() {
       <section className="container-x py-20 md:py-28">
         <p className="max-w-2xl text-lg text-[color:var(--ink-muted)] leading-relaxed">
           Eighty-two new pieces. Three families. Brass, opal glass and
-          blackened steel — drawn in Mirano, assembled by hand.
+          blackened steel — drawn in Prishtine, assembled by hand.
         </p>
       </section>
 

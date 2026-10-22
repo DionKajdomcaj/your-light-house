@@ -6,7 +6,6 @@ export const Route = createFileRoute("/company")({
 });
 
 const tabs = [
-  { to: "/company/history", label: "History" },
   { to: "/company/contacts", label: "Contacts" },
   { to: "/company/warehouse", label: "Warehouse" },
   { to: "/company/company-profile", label: "Company profile" },
@@ -16,9 +15,7 @@ function CompanyLayout() {
   const path = useRouterState({ select: (s) => s.location.pathname });
   return (
     <SiteShell>
-      <div className="container-x pt-36 pb-6 lg:pt-44">
-        <div className="eyebrow">Our company, our family</div>
-      </div>
+      <div className="container-x pt-36 pb-6 lg:pt-44" />
       <nav className="container-x flex flex-wrap gap-x-8 gap-y-3 border-b border-[color:var(--ink-light)]/40 pb-5 text-sm">
         {tabs.map((t) => (
           <Link

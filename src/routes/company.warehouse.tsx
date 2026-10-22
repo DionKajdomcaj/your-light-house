@@ -8,7 +8,7 @@ export const Route = createFileRoute("/company/warehouse")({
   head: () => ({
     meta: [
       { title: "Warehouse — Lighthouse" },
-      { name: "description", content: "Fifteen thousand square metres of stock in Mirano, ready to ship across five continents." },
+      { name: "description", content: "Fifteen thousand square metres of stock in Prishtine, ready to ship across five continents." },
       { property: "og:title", content: "Warehouse — Lighthouse" },
       { property: "og:image", content: insp2 },
       { property: "og:url", content: "/company/warehouse" },

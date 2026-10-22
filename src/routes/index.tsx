@@ -11,7 +11,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Lighthouse — Light up your ideal" },
-      { name: "description", content: "Decorative and technical lighting from Italy. Indoor, outdoor, recessed, systems." },
+      { name: "description", content: "Decorative and technical lighting. Indoor, outdoor, recessed, systems." },
       { property: "og:title", content: "Lighthouse — Light up your ideal" },
       { property: "og:url", content: "/" },
     ],
@@ -68,25 +68,6 @@ function Home() {
         </div>
       </section>
 
-      {/* EDITORIAL STATEMENT */}
-      <section className="container-x py-24 md:py-32">
-        <div className="grid gap-16 md:grid-cols-12">
-          <div className="md:col-span-4">
-            <div className="eyebrow">Our company, our family</div>
-          </div>
-          <div className="md:col-span-8">
-            <p className="text-2xl leading-snug md:text-3xl">
-              A family-run lighting house from the Venetian mainland.
-              Three thousand pieces in catalog, three hundred and fifty-six
-              active collections, one warehouse of fifteen thousand square
-              metres. Sold across five continents.
-            </p>
-            <Link to="/about" className="cta-link mt-10 border-b border-black/80">
-              Read our history <span aria-hidden>→</span>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* PRODUCT GRID */}
       <section className="container-x pb-24 md:pb-32">
@@ -131,17 +112,13 @@ function Home() {
             </div>
           </div>
           <div className="md:col-span-5">
-            <div className="eyebrow">Since 1974</div>
+            <div className="eyebrow">Our approach</div>
             <h2 className="h-section mt-5 text-3xl md:text-4xl">Enthusiasm for things well made</h2>
             <p className="mt-6 text-[color:var(--ink-muted)] leading-relaxed">
-              A passion that began in 1969 with a batch of Murano glass and
-              became, five years later, a workshop. Today, three generations
-              later, the principles are the same — transparency, simplicity,
-              and a quiet kind of craftsmanship.
+              Every fixture is drawn, prototyped and finished before it
+              enters the catalog. The principles are simple — transparency,
+              simplicity, and a quiet kind of craftsmanship.
             </p>
-            <Link to="/about" className="cta-link mt-8 border-b border-black/80">
-              Our history <span aria-hidden>→</span>
-            </Link>
           </div>
         </div>
       </section>

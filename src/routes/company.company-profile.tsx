@@ -14,9 +14,8 @@ export const Route = createFileRoute("/company/company-profile")({
 });
 
 const facts = [
-  ["Founded", "1974"],
-  ["Headquarters", "Mirano (VE), Italy"],
-  ["Ownership", "Family — third generation"],
+  ["Headquarters", "Prishtine, XK"],
+  ["Ownership", "Family-run"],
   ["Active SKUs", "3,000+"],
   ["Active collections", "356"],
   ["Markets", "5 continents"],
@@ -65,7 +64,7 @@ function CompanyProfilePage() {
             <div className="eyebrow">Vision</div>
             <p className="mt-3 text-lg leading-relaxed">
               A single family of three thousand fixtures, in production
-              for decades, made by one workshop on the Venetian mainland.
+              for decades, made from one warehouse in Prishtine.
             </p>
           </div>
         </div>

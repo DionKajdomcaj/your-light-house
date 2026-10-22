@@ -5,7 +5,7 @@ export const Route = createFileRoute("/company/contacts")({
   head: () => ({
     meta: [
       { title: "Contacts — Lighthouse" },
-      { name: "description", content: "Reach Lighthouse — headquarters in Mirano (VE), Italy." },
+      { name: "description", content: "Reach Lighthouse — Veterrnik 1, Prishtine, Kosovo." },
       { property: "og:title", content: "Contacts — Lighthouse" },
       { property: "og:url", content: "/company/contacts" },
     ],
@@ -13,17 +13,6 @@ export const Route = createFileRoute("/company/contacts")({
   }),
   component: ContactsPage,
 });
-
-const departments = [
-  { d: "Sales — Italy", e: "italia@lighthouse.example", p: "+39 041 57 90 501" },
-  { d: "Sales — Europe", e: "europe@lighthouse.example", p: "+39 041 57 90 502" },
-  { d: "Sales — Americas", e: "americas@lighthouse.example", p: "+39 041 57 90 503" },
-  { d: "Sales — MEA", e: "mea@lighthouse.example", p: "+39 041 57 90 504" },
-  { d: "Sales — APAC", e: "apac@lighthouse.example", p: "+39 041 57 90 505" },
-  { d: "Customer service", e: "service@lighthouse.example", p: "+39 041 57 90 510" },
-  { d: "Press & marketing", e: "press@lighthouse.example", p: "+39 041 57 90 520" },
-  { d: "HR & careers", e: "careers@lighthouse.example", p: "+39 041 57 90 530" },
-];
 
 function ContactsPage() {
   const [sent, setSent] = useState(false);
@@ -38,11 +27,19 @@ function ContactsPage() {
           <div>
             <div className="eyebrow">Headquarters</div>
             <address className="not-italic mt-4 leading-7 text-[color:var(--ink-muted)]">
-              Lighthouse S.p.A.<br />
-              Via Taglio Destro 32<br />
-              30035 Mirano (VE) — Italy<br />
-              T +39 041 57 90 500<br />
-              info@lighthouse.example
+              Lighthouse SH.P.K.<br />
+              Veterrnik - 1<br />
+              10000, Prishtine, XK<br />
+              T +383 45 555 355<br />
+              <a href="mailto:info@lighthouse-kos.com" className="hover:opacity-60">info@lighthouse-kos.com</a><br />
+              <a
+                href="https://www.instagram.com/lighthouse.studio"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-60"
+              >
+                @lighthouse.studio
+              </a>
             </address>
           </div>
           <div>
@@ -56,25 +53,12 @@ function ContactsPage() {
           <div className="aspect-[16/10] w-full overflow-hidden border border-[color:var(--ink-light)]/40 grayscale">
             <iframe
               title="Map of Lighthouse headquarters"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=12.10%2C45.49%2C12.13%2C45.51&amp;layer=mapnik"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=20.89%2C42.65%2C20.93%2C42.68&amp;layer=mapnik"
               className="h-full w-full"
               loading="lazy"
             />
           </div>
         </div>
-      </section>
-
-      <section className="container-x py-16 border-t border-[color:var(--ink-light)]/40">
-        <h2 className="h-section text-2xl md:text-3xl">Departments</h2>
-        <ul className="mt-10 divide-y divide-[color:var(--ink-light)]/40 border-y border-[color:var(--ink-light)]/40">
-          {departments.map((d) => (
-            <li key={d.d} className="grid gap-2 py-5 text-sm md:grid-cols-3 md:items-center">
-              <span className="t-product">{d.d}</span>
-              <a href={`mailto:${d.e}`} className="text-[color:var(--ink-muted)] hover:text-[color:var(--ink)]">{d.e}</a>
-              <span className="text-[color:var(--ink-muted)] md:text-right">{d.p}</span>
-            </li>
-          ))}
-        </ul>
       </section>
 
       <section className="container-x py-20 border-t border-[color:var(--ink-light)]/40">
